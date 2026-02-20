@@ -29,7 +29,7 @@
       const megaWrap = document.querySelector('.nav-mega-wrap');
       const megaTrigger = document.querySelector('.nav-mega-trigger');
       const megaMenu = document.querySelector('.mega-menu');
-      const desktopNavLinks = document.querySelectorAll('.nav > a');
+      const desktopNavLinks = document.querySelectorAll('.nav a');
       const megaLinks = document.querySelectorAll('.mega-menu a');
 
       const closeMegaMenu = () => {
@@ -106,8 +106,8 @@
         });
 
         window.addEventListener('resize', () => {
-          if (window.innerWidth > 1024 && document.body.classList.contains('menu-open')) {
-            closeMobileNav();
+          if (window.innerWidth <= 1024 && document.body.classList.contains('show-follower')) {
+            document.body.classList.remove('show-follower');
           }
         });
       }

@@ -248,6 +248,134 @@
     body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
     /* ==========================================================================
+       HEADER V2 (Client-facing structure)
+       ========================================================================== */
+    header {
+      gap: clamp(12px, 1.6vw, 22px);
+      background: rgba(244, 244, 244, 0.92);
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .logo-mark {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: linear-gradient(155deg, #ffffff 0%, #f0f4f8 100%);
+      color: #0a4f6c;
+      box-shadow: inset 0 0 0 1px rgba(10, 79, 108, 0.08);
+    }
+    .logo-mark svg { width: 30px; height: 30px; }
+    .logo-text {
+      font-size: clamp(32px, 2.5vw, 42px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      text-transform: none;
+    }
+    .nav {
+      justify-content: flex-start;
+      gap: clamp(14px, 1.5vw, 24px);
+      margin-left: clamp(8px, 1vw, 18px);
+    }
+    .nav a {
+      font-size: clamp(15px, 1vw, 18px);
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      color: rgba(17, 17, 17, 0.92);
+    }
+    .header-actions {
+      margin-left: auto;
+      gap: 8px;
+    }
+    .header-phone-chip {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--bg-white);
+      transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+    .header-phone-chip:hover { border-color: rgba(17, 17, 17, 0.32); transform: translateY(-1px); }
+    .header-phone-icon {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #eff2f6;
+      font-size: 14px;
+    }
+    .header-phone-meta {
+      display: grid;
+      line-height: 1.1;
+      gap: 2px;
+    }
+    .header-phone-meta b {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .header-phone-meta small {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+    .msg-btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--bg-white);
+      transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
+    }
+    .msg-btn:hover { transform: translateY(-1px); opacity: 0.96; }
+    .msg-btn::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+    }
+    .msg-btn-tg { background: #1f6fb4; }
+    .msg-btn-wa { background: #0f3a74; }
+    .menu-toggle {
+      display: inline-flex;
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      border: none;
+      background: #082a53;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+    .menu-toggle span {
+      width: 17px;
+      height: 2px;
+      background: #ffffff;
+    }
+    .mobile-nav {
+      width: min(430px, 100vw);
+      z-index: 260;
+    }
+    .mobile-nav-overlay { z-index: 250; }
+
+    /* ==========================================================================
        HERO (Split Screen)
        ========================================================================== */
     .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 80vh; }
@@ -685,8 +813,10 @@
        MOBILE RESPONSIVE
        ========================================================================== */
     @media (max-width: 1280px) {
-      .header-phone { display: none; }
-      .nav { gap: 14px; }
+      .header-phone-chip small { display: none; }
+      .nav { gap: 12px; }
+      .nav a { font-size: 14px; }
+      .msg-btn { padding: 0 14px; font-size: 11px; }
       .mega-menu { width: min(920px, 82vw); left: -16px; }
       .footer-main { grid-template-columns: 1fr 1fr; }
       .mega-top { grid-template-columns: 1fr; }
@@ -704,9 +834,9 @@
       header { padding: 10px var(--pad); }
       .nav { display: none; }
       .nav-mega-wrap { display: none; }
+      .header-phone-chip, .msg-btn { display: none; }
       .menu-toggle { display: inline-flex; }
       .header-actions { margin-left: auto; }
-      .header-actions .btn { padding: 12px 16px; font-size: 10px; }
       .hero { grid-template-columns: 1fr; }
       .hero-text-box { border-right: none; border-bottom: 1px solid var(--border); padding: 40px var(--pad); }
       .hero-img-box { height: 50vh; }
@@ -746,11 +876,12 @@
       .topbar { padding: 8px var(--pad); }
       .topbar span:last-child { display: none; }
       header { gap: 10px; }
-      .logo { font-size: 17px; }
+      .logo-mark { width: 44px; height: 44px; border-radius: 10px; }
+      .logo-mark svg { width: 24px; height: 24px; }
+      .logo-text { font-size: 28px; }
       .footer-main { grid-template-columns: 1fr; gap: 22px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
       .header-actions { gap: 8px; }
-      .header-actions .btn { padding: 11px 12px; font-size: 10px; }
       .menu-toggle { width: 44px; height: 44px; }
       .mobile-nav { width: 100vw; padding: 16px var(--pad) 22px; }
       .mobile-nav-links a { font-size: 13px; padding: 14px 0; }
