@@ -1,0 +1,7 @@
+URL;Check;Status;Notes
+/services/stroitelstvo-domov-pod-klyuch-mahachkala/;Intent match;pass;Коммерческий интент закрыт
+/services/stroitelstvo-domov-pod-klyuch-mahachkala/;No fake claims;pass;Все числовые обещания помечены TBD при отсутствии доказательств
+/services/stroitelstvo-domov-pod-klyuch-mahachkala/;FAQ visible+schema valid;pass;Включено в шаблон
+/services/proektirovanie-domov-mahachkala/;Intent match;pass;service_landing
+/tseny/;Price transparency;pass;Таблица + факторы стоимости
+/faq/;AEO short answers;pass;Короткие ответы обязательны

@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe — Главная (строительство домов, Махачкала)</title>
+  <meta name="description" content="Wireframe-прототип главной страницы: структура блоков для отрисовки уникального дизайна." />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+    :root {
+      --section-max: 1600px;
+      --gutter: clamp(14px, 2.4vw, 34px);
+      --bg: #f3f3f3;
+      --ink: #1a1a1a;
+      --muted: #6d6d6d;
+      --line: #bdbdbd;
+      --line-strong: #8a8a8a;
+      --card: #fcfcfc;
+      --tag-bg: #ededed;
+      --radius: 12px;
+      --radius-lg: 18px;
+      --space-1: 8px;
+      --space-2: 12px;
+      --space-3: 16px;
+      --space-4: 22px;
+      --space-5: 30px;
+      --space-6: 44px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: 24px 24px;
+      color: var(--ink);
+    }
+
+    .container {
+      width: min(var(--section-max), calc(100vw - var(--gutter) * 2));
+      margin: 0 auto;
+    }
+
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .wire-tag {
+      display: inline-block;
+      padding: 4px 8px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--tag-bg);
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #3a3a3a;
+      white-space: nowrap;
+    }
+
+    .frame {
+      border: 1px dashed var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.75);
+      padding: var(--space-3);
+    }
+
+    .frame-strong {
+      border: 2px dashed var(--line-strong);
+    }
+
+    .block {
+      background: var(--card);
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius);
+      padding: var(--space-3);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .top-note {
+      border-bottom: 1px dashed var(--line-strong);
+      background: #f7f7f7;
+      padding: 10px 0;
+      font-size: 13px;
+    }
+
+    .top-note .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(243, 243, 243, 0.95);
+      border-bottom: 1px dashed var(--line);
+      backdrop-filter: blur(4px);
+    }
+
+    .header-inner {
+      min-height: 72px;
+      display: grid;
+      grid-template-columns: 240px 1fr auto;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .logo-box,
+    .menu-box,
+    .actions-box {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      padding: 0 10px;
+      background: #fafafa;
+      font-size: 13px;
+    }
+
+    .menu-box {
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .actions-box {
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .btn-wire {
+      border: 1px dashed var(--line-strong);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 12px;
+      background: #fff;
+      font-weight: 600;
+    }
+
+    main {
+      padding: var(--space-5) 0 var(--space-6);
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .section {
+      border: 1px dashed var(--line);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      background: rgba(255, 255, 255, 0.7);
+      position: relative;
+    }
+
+    .section > .wire-tag {
+      position: absolute;
+      top: -12px;
+      left: 12px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: var(--space-2);
+      margin-bottom: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(20px, 2.6vw, 32px);
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    .section-note {
+      margin: 0;
+      max-width: 64ch;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--space-3);
+    }
+
+    .hero-kpis {
+      margin-top: var(--space-2);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-2);
+    }
+
+    .kpi-box {
+      min-height: 66px;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      font-size: 12px;
+      background: #fff;
+    }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: var(--space-2);
+    }
+
+    .chip {
+      border: 1px dashed var(--line);
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 11px;
+      background: #fff;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: var(--space-2);
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 8px;
+    }
+
+    .input-wire {
+      min-height: 40px;
+      border: 1px dashed var(--line-strong);
+      border-radius: 10px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      font-size: 12px;
+      color: #535353;
+    }
+
+    .grid-4,
+    .grid-3 {
+      display: grid;
+      gap: var(--space-2);
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-wire h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    .card-wire p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .card-wire ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .table-wire {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #fff;
+      border: 1px dashed var(--line-strong);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .table-wire th,
+    .table-wire td {
+      border-bottom: 1px dashed var(--line);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .table-wire tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .table-wire th {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #595959;
+      background: #f7f7f7;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: var(--space-2);
+    }
+
+    .step-wire {
+      min-height: 120px;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border: 1px dashed var(--line-strong);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+
+    .img-wire {
+      height: 130px;
+      border: 1px dashed var(--line-strong);
+      border-radius: 10px;
+      background:
+        linear-gradient(45deg, rgba(0, 0, 0, 0.04) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.04) 75%),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.04) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.04) 75%);
+      background-size: 18px 18px;
+      background-position: 0 0, 9px 9px;
+      margin-bottom: 8px;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      color: #666;
+    }
+
+    details {
+      border: 1px dashed var(--line-strong);
+      border-radius: 10px;
+      background: #fff;
+      padding: 10px;
+    }
+
+    details + details {
+      margin-top: 8px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    details p {
+      margin: 8px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .geo-grid,
+    .final-grid,
+    .footer-grid {
+      display: grid;
+      gap: var(--space-2);
+    }
+
+    .geo-grid {
+      grid-template-columns: 1.3fr 0.7fr;
+    }
+
+    .final-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer {
+      border-top: 1px dashed var(--line-strong);
+      padding: var(--space-4) 0 90px;
+      background: #f8f8f8;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1.2fr 1fr 1fr;
+    }
+
+    .sticky-wire {
+      position: fixed;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      z-index: 60;
+      border: 1px dashed var(--line-strong);
+      border-radius: 10px;
+      background: #fff;
+      display: none;
+      overflow: hidden;
+    }
+
+    .sticky-wire div {
+      flex: 1 1 0;
+      min-height: 44px;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      border-right: 1px dashed var(--line);
+    }
+
+    .sticky-wire div:last-child {
+      border-right: 0;
+    }
+
+    @media (max-width: 1200px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .geo-grid,
+      .final-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .header-inner {
+        grid-template-columns: 1fr;
+        padding: 10px 0;
+      }
+
+      .menu-box,
+      .actions-box,
+      .logo-box {
+        width: 100%;
+      }
+
+      .grid-3,
+      .grid-4,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-kpis {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky-wire {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-note">
+    <div class="container">
+      <span class="wire-tag mono">wireframe mode</span>
+      <span class="muted">Страница для дизайнера: структура и контент заполнены по данным `reports` (статус данных: 2026-02-20).</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo-box mono">LOGO / BRAND</div>
+      <div class="menu-box mono">NAV: услуги | цены | этапы | кейсы | отзывы | FAQ | контакты</div>
+      <div class="actions-box mono">
+        <button class="btn-wire">CTA secondary: цены</button>
+        <button class="btn-wire">CTA primary: расчет</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="section frame-strong" id="hero">
+        <span class="wire-tag mono">section 01 / hero + primary cta</span>
+        <div class="hero-grid">
+          <div class="block card-wire">
+            <div class="wire-tag mono">H1 + Value Proposition</div>
+            <h3>Строительство домов под ключ в Махачкале с проектом и инженерией</h3>
+            <p>Оффер проекта: проект + расчет материалов + строительство/отделка с фиксацией условий в договоре. Гео-фокус: Махачкала и Республика Дагестан. Цель страницы: лиды из Яндекс и Google.</p>
+            <div class="chips">
+              <span class="chip mono">гео: Махачкала + Дагестан</span>
+              <span class="chip mono">интент: commercial</span>
+              <span class="chip mono">must-have: цены, этапы, кейсы, FAQ</span>
+              <span class="chip mono">модель: direct + aggregators</span>
+            </div>
+            <div class="hero-kpis">
+              <div class="kpi-box mono">199 ключей в semantic core</div>
+              <div class="kpi-box mono">8 кластеров SERP snapshot</div>
+              <div class="kpi-box mono">10 прямых конкурентов</div>
+            </div>
+            <div class="cta-row">
+              <button class="btn-wire">CTA primary: получить смету</button>
+              <button class="btn-wire">CTA secondary: смотреть цены</button>
+            </div>
+            <p class="muted" style="margin-top:10px;font-size:12px;">SEO note: H1 один, коммерческий интент, primary CTA над фолдом.</p>
+          </div>
+
+          <div class="block card-wire">
+            <div class="wire-tag mono">Quick Answer + Lead Form</div>
+            <p>Стоимость зависит от площади, материалов, инженерии и участка. Для точной сметы нужен эскиз/ТЗ и базовые данные по участку; предварительный диапазон даем после первичного брифа.</p>
+            <div class="form-grid">
+              <div class="input-wire mono">поле: имя</div>
+              <div class="input-wire mono">поле: телефон</div>
+              <div class="input-wire mono">поле: направление (строительство / проектирование / инженерия / отделка)</div>
+              <div class="input-wire mono">поле: задача и параметры объекта</div>
+              <button class="btn-wire">submit: получить расчет стоимости</button>
+            </div>
+            <ul>
+              <li>после заявки: короткий бриф и первичный расчет</li>
+              <li>обязательный блок: согласие с политикой ПД</li>
+              <li>альтернативный контакт: WhatsApp/Telegram</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <span class="wire-tag mono">section 02 / service clusters</span>
+        <div class="section-head">
+          <h2 class="section-title">Направления услуг</h2>
+          <p class="section-note">4 кластера по семантике: строительство, проектирование, инженерия, отделка.</p>
+        </div>
+        <div class="grid-4">
+          <article class="block card-wire"><h3>Строительство домов под ключ</h3><p>Основной коммерческий кластер. URL: <span class="mono">/services/stroitelstvo-domov-pod-klyuch-mahachkala/</span></p></article>
+          <article class="block card-wire"><h3>Проектирование домов</h3><p>Отдельная услуга под интент проектирования. URL: <span class="mono">/services/proektirovanie-domov-mahachkala/</span></p></article>
+          <article class="block card-wire"><h3>Проект инженерных сетей</h3><p>Инженерный подкластер с собственным landing. URL: <span class="mono">/services/proekt-inzhenernyh-setey-mahachkala/</span></p></article>
+          <article class="block card-wire"><h3>Отделочные работы</h3><p>Коммерческий кластер отделки с ценовым интентом. URL: <span class="mono">/services/otdelochnye-raboty-mahachkala/</span></p></article>
+        </div>
+      </section>
+
+      <section class="section" id="prices">
+        <span class="wire-tag mono">section 03 / prices + cost factors</span>
+        <div class="section-head">
+          <h2 class="section-title">Цены и факторы стоимости</h2>
+          <p class="section-note">Блок под high-intent запросы "цена/стоимость" + переход в детальные прайс-страницы.</p>
+        </div>
+        <div class="grid-3" style="grid-template-columns: 1.4fr 0.6fr;">
+          <div class="block">
+            <table class="table-wire">
+              <thead>
+                <tr><th>Сценарий</th><th>Что входит</th><th>Условия</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Строительство домов (Дагестан)</td><td>Коробка/материалы/этапы реализации</td><td>Прайс-страница: <span class="mono">/tseny/stroitelstvo-domov-v-dagestane/</span></td></tr>
+                <tr><td>Проектирование дома</td><td>Архитектурные, конструктивные и инженерные разделы</td><td>Состав и срок уточняются по ТЗ</td></tr>
+                <tr><td>Отделочные работы (Махачкала)</td><td>Черновые и чистовые работы по смете</td><td>Прайс-страница: <span class="mono">/tseny/otdelochnye-raboty-mahachkala/</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <aside class="block card-wire">
+            <h3>Факторы цены</h3>
+            <ul>
+              <li>площадь и этажность</li>
+              <li>материалы и технология</li>
+              <li>инженерные разделы</li>
+              <li>отделка и сроки</li>
+            </ul>
+            <button class="btn-wire" style="margin-top:8px;">CTA: получить предварительную смету</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <span class="wire-tag mono">section 04 / process timeline</span>
+        <div class="section-head">
+          <h2 class="section-title">Процесс в 6 этапов</h2>
+          <p class="section-note">Нужен для снятия возражений и повышения доверия до отправки формы.</p>
+        </div>
+        <div class="steps">
+          <article class="block step-wire"><div class="step-num mono">01</div><h3>Бриф</h3><p class="muted">Собираем задачу, гео и ожидания по срокам/бюджету.</p></article>
+          <article class="block step-wire"><div class="step-num mono">02</div><h3>Смета</h3><p class="muted">Даем предварительный расчет и сценарии реализации.</p></article>
+          <article class="block step-wire"><div class="step-num mono">03</div><h3>Договор</h3><p class="muted">Фиксируем этапы, условия и порядок изменений.</p></article>
+          <article class="block step-wire"><div class="step-num mono">04</div><h3>Проектирование</h3><p class="muted">Архитектура, конструктив, инженерные решения по объекту.</p></article>
+          <article class="block step-wire"><div class="step-num mono">05</div><h3>Реализация</h3><p class="muted">Строительство, инженерия, отделка в согласованной логике.</p></article>
+          <article class="block step-wire"><div class="step-num mono">06</div><h3>Сдача</h3><p class="muted">Финальная проверка и передача результата клиенту.</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="proof">
+        <span class="wire-tag mono">section 05 / proof matrix blocks</span>
+        <div class="section-head">
+          <h2 class="section-title">Доказательства и trust-сигналы</h2>
+          <p class="section-note">Каждое обещание = отдельный proof-блок с источником/документом.</p>
+        </div>
+        <div class="grid-3">
+          <article class="block card-wire"><h3>Фиксированная стоимость по договору</h3><p>Proof asset: шаблон договора + смета. Источник: <span class="mono">TBD</span>. Владелец: Sales/Ops.</p></article>
+          <article class="block card-wire"><h3>Гарантия на работы</h3><p>Proof asset: гарантийные условия. Источник: <span class="mono">TBD</span>. Владелец: Ops.</p></article>
+          <article class="block card-wire"><h3>Кейсы и отзывы</h3><p>Proof assets: <span class="mono">/raboty/</span> и <span class="mono">/otzyvy/</span>. Владельцы: Marketing/Support.</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="cases">
+        <span class="wire-tag mono">section 06 / cases</span>
+        <div class="section-head">
+          <h2 class="section-title">Кейсы</h2>
+          <p class="section-note">Карточка: превью + задача + решение + сроки + результат + CTA.</p>
+        </div>
+        <div class="grid-3">
+          <article class="block card-wire">
+            <div class="img-wire mono">визуал кейса / строительство</div>
+            <h3>Кейс: строительство дома под ключ</h3>
+            <ul><li>кластер: строительство домов</li><li>решение: полный цикл с этапным контролем</li><li>CTA: перейти на <span class="mono">/raboty/</span></li></ul>
+          </article>
+          <article class="block card-wire">
+            <div class="img-wire mono">визуал кейса / проектирование</div>
+            <h3>Кейс: проект дома с инженерией</h3>
+            <ul><li>кластер: проектирование + инженерные сети</li><li>решение: АР/КР + инженерные разделы</li><li>CTA: <span class="mono">/services/proektirovanie-domov-mahachkala/</span></li></ul>
+          </article>
+          <article class="block card-wire">
+            <div class="img-wire mono">визуал кейса / отделка</div>
+            <h3>Кейс: отделочные работы</h3>
+            <ul><li>кластер: отделочные работы</li><li>решение: черновая + чистовая отделка</li><li>CTA: <span class="mono">/services/otdelochnye-raboty-mahachkala/</span></li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <span class="wire-tag mono">section 07 / reviews</span>
+        <div class="section-head">
+          <h2 class="section-title">Отзывы и внешние источники доверия</h2>
+          <p class="section-note">Отзывы + ссылки на площадки + ответы компании.</p>
+        </div>
+        <div class="grid-3">
+          <article class="block card-wire"><h3>Отзывы: сценарий публикации</h3><p>Формат карточки: текст отзыва, дата, услуга, ответ компании.</p><p class="mono muted">source: /otzyvy/ + Yandex/Google/2GIS</p></article>
+          <article class="block card-wire"><h3>Отзывы: контроль качества</h3><p>SLA ответов: 24-72 часа. Регулярность обновления: weekly.</p><p class="mono muted">source: reports/08_stage7_offpage_local/review_reputation_plan.csv</p></article>
+          <article class="block card-wire"><h3>Отзывы: trust для SEO</h3><p>Важна связка «отзыв на площадке» -> «подтверждение на сайте» без фейковых данных.</p><p class="mono muted">source: reports/05_stage4_content_meta/proof_matrix.csv</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <span class="wire-tag mono">section 08 / faq</span>
+        <div class="section-head">
+          <h2 class="section-title">FAQ</h2>
+          <p class="section-note">Перед финальным CTA: ответы на ключевые возражения.</p>
+        </div>
+        <details><summary>Сколько стоит построить дом в Дагестане?</summary><p>Стоимость зависит от площади, материалов, инженерии и участка. Для точной сметы нужен эскиз/ТЗ; целевой URL: <span class="mono">/tseny/stroitelstvo-domov-v-dagestane/</span>.</p></details>
+        <details><summary>Какие сроки строительства дома под ключ?</summary><p>Срок зависит от технологии и площади, обычно фиксируется по этапам в договоре: фундамент, коробка, кровля, инженерия, отделка. URL: <span class="mono">/services/stroitelstvo-domov-pod-klyuch-mahachkala/</span>.</p></details>
+        <details><summary>Нужен ли проект перед строительством частного дома?</summary><p>Да, проект снижает риск ошибок и помогает точно планировать бюджет и материалы. URL: <span class="mono">/services/proektirovanie-domov-mahachkala/</span>.</p></details>
+        <details><summary>Что входит в проект инженерных сетей?</summary><p>Схемы электроснабжения, водоснабжения, канализации, отопления/вентиляции и спецификации материалов. URL: <span class="mono">/services/proekt-inzhenernyh-setey-mahachkala/</span>.</p></details>
+      </section>
+
+      <section class="section" id="geo">
+        <span class="wire-tag mono">section 09 / geo + local seo</span>
+        <div class="geo-grid">
+          <div class="block card-wire">
+            <h3>Локальное покрытие</h3>
+            <p>Базовое гео проекта: <strong>Махачкала + Республика Дагестан</strong>. Главная страница закрывает коммерческий интент по строительству, проектированию, инженерии и отделке.</p>
+          </div>
+          <div class="block card-wire">
+            <h3>NAP блок</h3>
+            <ul><li>Название компании: TBD</li><li>Адрес: TBD (Махачкала)</li><li>Телефон: TBD</li><li>Часы работы: TBD</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section frame-strong" id="contact">
+        <span class="wire-tag mono">section 10 / final cta</span>
+        <div class="final-grid">
+          <div class="block card-wire">
+            <h3>Финальный оффер + CTA</h3>
+            <p>Цель: конвертировать в лид. После отправки формы — уточняющий бриф, предварительный расчет и согласование следующего шага по выбранному направлению.</p>
+            <div class="chips">
+              <span class="chip mono">звонок</span>
+              <span class="chip mono">whatsapp</span>
+              <span class="chip mono">telegram</span>
+            </div>
+          </div>
+          <form class="block form-grid" action="#" method="post">
+            <div class="input-wire mono">поле: имя</div>
+            <div class="input-wire mono">поле: телефон</div>
+            <div class="input-wire mono">поле: направление услуги</div>
+            <div class="input-wire mono">поле: комментарий (площадь, участок, сроки)</div>
+            <button type="button" class="btn-wire">submit: отправить заявку на расчет</button>
+            <p class="muted" style="margin:0;font-size:12px;">Юридический блок: согласие с политикой обработки данных + дисклеймер по `TBD` ценам/гарантиям.</p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="block card-wire"><h3>Контекст проекта</h3><p>Стадия: new site. Primary goal: leads. Каналы: Yandex + Google.</p></div>
+      <div class="block card-wire"><h3>Ключевые URL структуры</h3><p class="mono">/services/ /tseny/ /raboty/ /otzyvy/ /faq/ /kontakty/</p></div>
+      <div class="block card-wire"><h3>Что заполнить перед продакшном</h3><p>Domain, NAP, price_from, guarantee, CRM/calltracking интеграции.</p></div>
+    </div>
+  </footer>
+
+  <div class="sticky-wire" aria-hidden="true">
+    <div class="mono">позвонить</div>
+    <div class="mono">whatsapp</div>
+    <div class="mono">заявка</div>
+  </div>
+</body>
+</html>

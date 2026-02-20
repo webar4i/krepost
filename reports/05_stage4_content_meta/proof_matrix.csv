@@ -1,0 +1,7 @@
+Claim/USP;Proof type;Proof asset;Source/URL;Where on site (page/block);Owner;Update cadence
+Фиксированная стоимость по договору;Document;Шаблон договора + смета;TBD;/services/*: Hero + Price block;Sales/Ops;monthly
+Гарантия на работы;Document;Гарантийные условия;TBD;/services/*: Hero + FAQ;Ops;quarterly
+Реальные кейсы с результатом;Cases;Карточки кейсов;/raboty/;home + /raboty/ + service pages;Marketing;monthly
+Реальные отзывы клиентов;Review;Отзывы + ссылки на площадки;/otzyvy/;home + /otzyvy/ + service pages;Support;weekly
+Сроки выполнения по этапам;Process doc;Календарный план/этапы;TBD;/services/*: process block;PM;monthly
+Проект + инженерные разделы в составе услуги;Scope list;Состав работ;/services/proekt-inzhenernyh-setey-mahachkala/;service pages + FAQ;Engineering;quarterly

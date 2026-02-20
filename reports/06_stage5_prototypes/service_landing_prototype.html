@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Service Landing Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Literata:opsz,wght@7..72,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7ef;--ink:#1f2328;--line:#ddd2bf;--accent:#0f6d63;--warm:#bf5b35}
+*{box-sizing:border-box}body{margin:0;font-family:Manrope,sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{width:min(1024px,92vw);margin:0 auto;padding:24px 0 56px}
+h1,h2{font-family:Literata,serif;margin:0 0 12px}h1{font-size:clamp(28px,4.4vw,44px)}h2{font-size:30px}
+.hero{display:grid;grid-template-columns:1fr .9fr;gap:18px;align-items:stretch}
+.box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+.badges span{display:inline-block;padding:7px 10px;border:1px solid var(--line);border-radius:999px;margin:4px 8px 0 0;font-size:13px}
+.price-table{width:100%;border-collapse:collapse}.price-table td,.price-table th{border-bottom:1px solid var(--line);padding:10px;text-align:left}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.cta{background:var(--warm);color:#fff;border:0;padding:12px 14px;border-radius:12px;font-weight:700}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:8px}
+@media (max-width:900px){.hero,.grid{grid-template-columns:1fr}}
+</style></head><body>
+<div class="wrap">
+<section class="hero">
+  <div class="box">
+    <h1>Строительство домов под ключ в Махачкале</h1>
+    <p>Полный цикл: проектирование, смета, строительство, инженерия и отделка.</p>
+    <div class="badges"><span>Договор</span><span>Этапы и сроки</span><span>Локальная экспертиза</span></div>
+    <p><button class="cta">Получить смету</button></p>
+  </div>
+  <aside class="box">
+    <strong>Короткий ответ</strong>
+    <p>Стоимость и сроки зависят от площади, материалов и состава работ. Для точной сметы нужен первичный бриф и ТЗ.</p>
+  </aside>
+</section>
+
+<section class="box" style="margin-top:14px">
+  <h2>Цены и что влияет</h2>
+  <table class="price-table">
+    <tr><th>Сценарий</th><th>Что входит</th><th>Комментарий</th></tr>
+    <tr><td>Базовый</td><td>Коробка + кровля</td><td>Детализируется после ТЗ</td></tr>
+    <tr><td>Стандарт</td><td>Строительство + инженерия</td><td>Оптимален для большинства проектов</td></tr>
+    <tr><td>Полный</td><td>Под ключ с отделкой</td><td>Максимальный контроль сроков/бюджета</td></tr>
+  </table>
+</section>
+
+<section class="box" style="margin-top:14px">
+  <h2>Как мы работаем</h2>
+  <div class="grid"><div class="box">Бриф</div><div class="box">Смета</div><div class="box">Договор</div><div class="box">Проект</div><div class="box">Стройка</div><div class="box">Сдача</div></div>
+</section>
+
+<section class="box" style="margin-top:14px">
+  <h2>Кейсы и отзывы</h2>
+  <p>Покажите 3-8 кейсов с параметрами: объект, срок, результат, стоимость (если можно).</p>
+</section>
+
+<section class="faq" style="margin-top:14px">
+  <h2>FAQ</h2>
+  <details><summary>Можно ли строить поэтапно?</summary><p>Да, этапность фиксируется в смете и договоре.</p></details>
+  <details><summary>Меняется ли цена в процессе?</summary><p>Цена меняется только при согласованном изменении объема/ТЗ.</p></details>
+  <details><summary>Что входит в гарантию?</summary><p>Состав гарантии описывается в договоре (TBD после верификации).</p></details>
+</section>
+
+<section class="box" style="margin-top:14px">
+  <h2>Оставить заявку</h2>
+  <p><button class="cta">Получить консультацию</button></p>
+</section>
+</div>
+</body></html>

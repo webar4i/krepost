@@ -1,0 +1,10 @@
+content_brief:
+  url: "/guides/stroitelstvo/oshibki-pri-vybore-podryadchika/"
+  page_type: "guide_pillar"
+  main_query: "как выбрать подрядчика на строительство дома"
+  intent: "informational"
+  serp_requirements:
+    must_have_blocks: ["short_answer", "checklist", "comparison_table", "faq", "cta"]
+  key_entities: ["договор", "смета", "сроки", "гарантия", "кейс"]
+  citations_required: true
+  primary_cta: "Получить консультацию"

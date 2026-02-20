@@ -1,0 +1,20 @@
+URL;Page Type;Purpose;Primary Cluster;Intent;Depth;Template
+/;home;Главная + главный коммерческий оффер;Строительство домов;Commercial;1;home_template
+/services/;service_category;Категория услуг;Все направления;Commercial;1;category_template
+/services/stroitelstvo-domov-pod-klyuch-mahachkala/;service_landing;Строительство под ключ;Строительство домов;Commercial;2;service_template
+/services/proektirovanie-domov-mahachkala/;service_landing;Проектирование домов;Проектирование;Commercial;2;service_template
+/services/proekt-inzhenernyh-setey-mahachkala/;service_landing;Проект инженерных сетей;Инженерия;Commercial;2;service_template
+/services/otdelochnye-raboty-mahachkala/;service_landing;Отделочные работы;Отделочные работы;Commercial;2;service_template
+/tseny/;prices_hub;Хаб цен;Все направления;Commercial;1;prices_template
+/tseny/stroitelstvo-domov-v-dagestane/;prices;Цены на строительство;Строительство домов;Commercial;2;prices_template
+/tseny/otdelochnye-raboty-mahachkala/;prices;Цены на отделку;Отделочные работы;Commercial;2;prices_template
+/raboty/;cases_hub;Кейсы/портфолио;Доверие;Commercial;1;cases_template
+/otzyvy/;reviews_hub;Отзывы клиентов;Доверие;Commercial;1;reviews_template
+/faq/;faq_hub;FAQ по услугам;AEO/поддержка интента;Informational;1;faq_template
+/guides/;guides_hub;Гайды и статьи;Информационные кластеры;Informational;1;guide_template
+/guides/stroitelstvo/oshibki-pri-vybore-podryadchika/;child_guide;Ошибки при выборе подрядчика;Строительство домов;Informational;3;guide_template
+/guides/proektirovanie/chto-vhodit-v-proekt/;child_guide;Что входит в проект дома;Проектирование;Informational;3;guide_template
+/guides/inzheneriya/vodosnabzhenie-i-kanalizaciya/;child_guide;Инженерные сети: вода и канализация;Инженерия;Informational;3;guide_template
+/guides/otdelka/chernovaya-vs-chistovaya/;child_guide;Черновая vs чистовая отделка;Отделочные работы;Informational;3;guide_template
+/o-kompanii/;trust_page;О компании;Доверие;Navigational;1;trust_template
+/kontakty/;trust_page;Контакты и зоны обслуживания;Локальное SEO;Navigational;1;trust_template

@@ -1,0 +1,11 @@
+competitive_landscape:
+  market_concentration: "Medium"
+  direct_vs_aggregators_serp_split: "direct ~10/10, aggregators/directories present in most clusters"
+  leader_gap: "TBD (нет единой метрики трафика по локальному гео)"
+  must_have_elements: 8
+  differentiators: 4
+  market_opportunity: "HIGH"
+  notes:
+    - "Локальный спрос выражен во всех 4 направлениях: строительство, проектирование, инженерия, отделка."
+    - "Агрегаторы/карты системно присутствуют в коммерческой выдаче."
+    - "Для direct сайта ключевое преимущество — прозрачная смета + доказательства + кейсы."

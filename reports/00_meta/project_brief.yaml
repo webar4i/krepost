@@ -1,0 +1,21 @@
+project:
+  niche: "Строительство частных домов под ключ, проектирование, инженерия, отделочные работы"
+  geo:
+    city: "Махачкала"
+    region: "Республика Дагестан"
+    country: "RU"
+  stage: "new"
+  primary_goal: "leads"
+  channels:
+    - yandex
+    - google
+  status_date: "2026-02-20"
+  offer:
+    usp: "Проект + расчет материалов + строительство/отделка с фиксацией условий в договоре"
+    price_from: "TBD"
+    guarantee: "TBD"
+  constraints:
+    domain: "TBD"
+    cms: "TBD"
+    languages: ["ru"]
+    regions: ["Махачкала", "Республика Дагестан"]

@@ -1,0 +1,11 @@
+ID;Page/Template;Hypothesis;Metric;Expected impact;Effort;Priority
+CRO-01;/ (home);"В Hero показать фиксированный процесс + CTA ""Рассчитать стоимость""";CTR primary CTA;+15-25% CTR;M;HIGH
+CRO-02;service_landing;"Добавить блок ""Что входит/не входит"" рядом с ценой";Form conversion rate;+10-18% CVR;M;HIGH
+CRO-03;service_landing;Добавить 3 кейса с сроком/сметой/результатом;Lead quality rate;+8-15% SQL share;M;HIGH
+CRO-04;/tseny/;Сделать сценарии сметы (3 пакета) + FAQ;Price-to-lead conversion;+12-20%;M;HIGH
+CRO-05;/kontakty/;Упростить форму до 3 полей + выбор услуги;Form completion rate;+10-20%;S;HIGH
+CRO-06;all pages;Закрепить mobile CTA (звонок/мессенджер);Mobile lead rate;+10-18%;M;HIGH
+CRO-07;guide_pillar;"Добавить мягкий CTA после блока ""Короткий ответ""";Guide-assisted leads;+5-12%;S;MEDIUM
+CRO-08;service_landing;Явно вынести договор/гарантию в Hero;Bounce rate;-6-12%;S;MEDIUM
+CRO-09;home;Внедрить квиз на 5 шагов;Quiz completion;+8-15%;M;MEDIUM
+CRO-10;all forms;Валидация и маска телефона + понятные ошибки;Form error rate;-20-35% ошибок;S;CRITICAL

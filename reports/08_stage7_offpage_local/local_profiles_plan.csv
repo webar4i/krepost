@@ -1,0 +1,5 @@
+Channel;Asset;Task;Owner;Effort;Priority;KPI
+Local;Yandex Business;Заполнить категории/услуги/описание/NAP/фото;Marketing;M;HIGH;Profile completeness + actions
+Local;Google Business Profile;Заполнить услуги/зоны обслуживания/FAQ/посты;Marketing;M;HIGH;Calls + website clicks
+Local;2GIS;Синхронизировать NAP и услуги;Marketing;S;MEDIUM;Consistency score
+Local;Website NAP;Вынести единый NAP в шапку/футер/контакты;Dev+Marketing;S;HIGH;NAP consistency

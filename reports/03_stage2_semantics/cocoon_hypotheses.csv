@@ -1,0 +1,5 @@
+ID;Кокон;Main Query;Pillar URL;Child 1;Child 2;Child 3;Search Intent;Traffic Potential;Priority
+K1;Строительство домов;строительство домов под ключ махачкала;/services/stroitelstvo-domov-pod-klyuch-mahachkala/;/guides/stroitelstvo/oshibki-pri-vybore-podryadchika/;/guides/stroitelstvo/kak-vybrat-tehnologiyu-doma/;/tseny/stroitelstvo-domov-v-dagestane/;Commercial;HIGH;CRITICAL
+K2;Проектирование;проектирование домов махачкала;/services/proektirovanie-domov-mahachkala/;/guides/proektirovanie/chto-vhodit-v-proekt/;/guides/proektirovanie/kak-sostavit-tz/;/guides/proektirovanie/tipovoy-vs-individualnyy-proekt/;Commercial;MEDIUM;HIGH
+K3;Инженерия;проект инженерных сетей частного дома махачкала;/services/proekt-inzhenernyh-setey-mahachkala/;/guides/inzheneriya/vodosnabzhenie-i-kanalizaciya/;/guides/inzheneriya/elektrika-i-slabotochka/;/guides/inzheneriya/stoimost-proekta-setey/;Commercial;MEDIUM;HIGH
+K4;Отделка;отделочные работы махачкала;/services/otdelochnye-raboty-mahachkala/;/guides/otdelka/chernovaya-vs-chistovaya/;/guides/otdelka/etapy-i-sroki/;/tseny/otdelochnye-raboty-mahachkala/;Commercial;HIGH;HIGH

@@ -1,0 +1,7 @@
+Metric;Definition;Source;Granularity;Owner;Update frequency
+organic_sessions;Сессии из organic;GA4;daily/weekly;Analyst;daily
+organic_leads;Лиды из organic (form+call+messenger);GA4+Metrika+CRM(TBD);daily/weekly;Marketing;daily
+top10_keywords;Количество запросов в топ-10;Rank tracker / ручной мониторинг;weekly;SEO;weekly
+cluster_coverage;Опубликованные страницы / план;Content tracker;weekly;SEO Lead;weekly
+aeo_mentions;Количество упоминаний/цитирований в answer engines;AEO log;monthly;SEO;monthly
+local_profile_actions;Действия в профилях (звонки/маршруты/клики);Yandex/Google profiles;weekly;Local SEO;weekly

@@ -1,0 +1,21 @@
+kpi_targets:
+  organic_traffic:
+    baseline: "TBD"
+    target_6m: "+60% к baseline"
+    target_12m: "+140% к baseline"
+  organic_leads:
+    baseline: "TBD"
+    target_6m: "+40%"
+    target_12m: "+110%"
+  conversion_rate:
+    baseline: "TBD"
+    target_6m: "+0.8 pp"
+    target_12m: "+1.5 pp"
+  rankings:
+    top10_keywords_target_6m: 25
+    top10_keywords_target_12m: 60
+  answer_engine_visibility:
+    cited_pages_target_6m: 5
+    cited_pages_target_12m: 15
+  local_visibility:
+    local_profile_actions_growth_6m: "+35%"

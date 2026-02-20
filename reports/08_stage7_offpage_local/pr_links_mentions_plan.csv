@@ -1,0 +1,5 @@
+Channel;Asset;Task;Owner;Effort;Priority;KPI
+PR;Кейс-статья;Публикация кейса с цифрами и фото;Marketing;M;HIGH;Brand mentions
+Mentions;Unlinked mention outreach;Найти упоминания без ссылки и запросить ссылку;SEO;M;MEDIUM;Ref domains
+Partnership;Локальные партнеры;Совместные материалы с архитекторами/поставщиками;BizDev;M;MEDIUM;Qualified referral traffic
+Directories;Профильные каталоги;Добавить карточки компании и услуги;SEO;S;MEDIUM;Citations count

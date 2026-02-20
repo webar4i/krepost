@@ -1,0 +1,5 @@
+Platform;Task;SLA;Owner;Priority;KPI
+Yandex;Сценарий запроса отзыва после завершения этапа;48h;Support;HIGH;Review count growth
+Google;Ответ на новый отзыв;24h;Support;HIGH;Response rate >= 95%
+2GIS;Сбор отзывов и ответы;72h;Support;MEDIUM;Rating stability
+Website /otzyvy/;Публикация валидных отзывов с источником;weekly;Marketing;HIGH;Trust CTR

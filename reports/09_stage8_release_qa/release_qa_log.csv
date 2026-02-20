@@ -1,0 +1,9 @@
+Area;Check;Status;Owner;Fix;ETA
+Crawl;No 4xx/5xx on key pages;todo;Dev;Проверка после публикации;TBD
+Crawl;Canonical/self-reference configured;todo;Dev;Настроить canonical;TBD
+Indexation;robots.txt allows key sections;todo;Dev;Проверка robots;TBD
+Schema;FAQPage valid and matches visible content;todo;Dev;Валидация JSON-LD;TBD
+Content;No duplicate Title/H1 in templates;todo;SEO;Проверка шаблонов;TBD
+Proof Matrix;Commercial claims have proof links;todo;Marketing;Закрыть TBD-пункты;TBD
+Tracking;form_submit/call_click collected;todo;Analyst;Проверка в debug mode;TBD
+Mobile;CTA visible and forms usable;todo;QA;Тест 360-430px;TBD

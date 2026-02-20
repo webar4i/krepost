@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="ru" class="lenis">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Строительство домов под ключ в Махачкале | Проект, инженерия, отделка</title>
+  <meta name="description" content="Строительство домов в Махачкале и Дагестане: проектирование, инженерные сети, отделочные работы. Прозрачная смета, этапы, кейсы, отзывы, FAQ." />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Строительство домов под ключ в Махачкале" />
+  <meta property="og:description" content="Проект + инженерия + отделка. Этапы, цены, кейсы, отзывы и быстрый расчет." />
+  <meta property="og:url" content="https://YOUR-DOMAIN.RU/" />
+  <meta property="og:locale" content="ru_RU" />
+  
+  <!-- Шрифт: Только строгий современный Sans-Serif (Manrope) для техничного/архитектурного вида -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lenis: Плавный скролл -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph":[
+      {
+        "@type": "LocalBusiness",
+        "name": "DOMA DAG",
+        "url": "https://YOUR-DOMAIN.RU/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Махачкала",
+          "addressRegion": "Республика Дагестан",
+          "addressCountry": "RU"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity":
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       VARIABLES & ARHDM ARCHITECTURAL THEME
+       ========================================================================== */
+    :root {
+      --bg: #F4F4F4;         /* Light tech gray */
+      --bg-white: #FFFFFF;
+      --text: #111111;       /* Deep black */
+      --text-muted: #7A7A7A;
+      --border: rgba(17, 17, 17, 0.15); /* Distinct structural lines */
+      
+      --font-main: 'Manrope', sans-serif;
+      
+      --pad: clamp(20px, 4vw, 60px);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; cursor: none !important; }
+    
+    html.lenis { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto; overscroll-behavior: contain; }
+    .lenis.lenis-stopped { overflow: hidden; }
+
+    body {
+      background-color: var(--bg); color: var(--text);
+      font-family: var(--font-main); -webkit-font-smoothing: antialiased;
+      overflow-x: hidden; width: 100vw;
+    }
+
+    a, button { text-decoration: none; color: inherit; background: none; border: none; font-family: inherit; outline: none; }
+    ul { list-style: none; }
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ==========================================================================
+       CUSTOM CURSOR (Blend Mode Difference)
+       ========================================================================== */
+    .cursor {
+      position: fixed; top: 0; left: 0; width: 12px; height: 12px;
+      background: var(--text); border-radius: 50%; pointer-events: none; z-index: 10000;
+      transform: translate(-50%, -50%); transition: width 0.3s var(--ease), height 0.3s var(--ease);
+      mix-blend-mode: difference; background-color: #fff;
+    }
+    body.hovering .cursor { width: 60px; height: 60px; }
+    body.hovering-img .cursor { width: 100px; height: 100px; }
+    .cursor-text {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      font-size: 10px; font-weight: 700; text-transform: uppercase; color: #000;
+      opacity: 0; transition: opacity 0.3s; pointer-events: none;
+    }
+    body.hovering-img .cursor-text { opacity: 1; }
+
+    /* ==========================================================================
+       TYPOGRAPHY
+       ========================================================================== */
+    .h-huge { font-size: clamp(40px, 8vw, 130px); font-weight: 500; letter-spacing: -0.03em; line-height: 0.9; text-transform: uppercase; }
+    .h-lg { font-size: clamp(30px, 5vw, 80px); font-weight: 500; letter-spacing: -0.02em; line-height: 1; text-transform: uppercase; }
+    .h-md { font-size: clamp(24px, 3vw, 40px); font-weight: 500; line-height: 1.1; }
+    
+    .t-mono { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; color: var(--text-muted); }
+    .t-body { font-size: clamp(16px, 1.5vw, 20px); line-height: 1.5; color: var(--text-muted); }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 16px 32px; font-size: 12px; text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;
+      background: var(--text); color: var(--bg-white); border-radius: 4px;
+      position: relative; overflow: hidden; transition: transform 0.3s var(--ease);
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-outline:hover { background: var(--text); color: var(--bg-white); }
+
+    /* REVEAL ANIMATIONS */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 1s var(--ease); }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+    /* ==========================================================================
+       LAYOUT / GRID SYSTEM (The core of ARHDM style)
+       ========================================================================== */
+    .grid-wrap { border-left: 1px solid var(--border); border-right: 1px solid var(--border); margin: 0 var(--pad); }
+    .border-b { border-bottom: 1px solid var(--border); }
+    .border-r { border-right: 1px solid var(--border); }
+    
+    .topbar { display: flex; justify-content: space-between; padding: 10px var(--pad); border-bottom: 1px solid var(--border); }
+    
+    header {
+      position: sticky; top: 0; background: rgba(244, 244, 244, 0.8); backdrop-filter: blur(10px);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px var(--pad); border-bottom: 1px solid var(--border); z-index: 100;
+    }
+    .logo { font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; }
+    .nav { display: flex; gap: 40px; }
+    .nav a { font-size: 12px; font-weight: 600; text-transform: uppercase; }
+
+    /* ==========================================================================
+       HERO (Split Screen)
+       ========================================================================== */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 80vh; }
+    .hero-text-box { padding: clamp(40px, 6vw, 100px); display: flex; flex-direction: column; justify-content: space-between; }
+    .hero-img-box { position: relative; overflow: hidden; }
+    .hero-img { transform: scale(1.05); transition: transform 2s var(--ease); }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+    .hero-tags span { padding: 6px 12px; border: 1px solid var(--border); border-radius: 100px; font-size: 11px; text-transform: uppercase; font-weight: 600; }
+
+    /* ==========================================================================
+       KPIs
+       ========================================================================== */
+    .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .kpi-item { padding: 40px; display: flex; flex-direction: column; gap: 10px; }
+    .kpi-item:not(:last-child) { border-right: 1px solid var(--border); }
+    .kpi-item b { font-size: clamp(40px, 4vw, 80px); font-weight: 400; line-height: 1; }
+
+    /* ==========================================================================
+       SERVICES (Follow Image on Hover)
+       ========================================================================== */
+    .services-sec { position: relative; }
+    .sec-header { padding: 60px var(--pad); display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+    
+    .svc-list { display: flex; flex-direction: column; }
+    .svc-row { display: grid; grid-template-columns: 100px 1fr 2fr; padding: 60px var(--pad); align-items: center; border-top: 1px solid var(--border); position: relative; z-index: 2; transition: background 0.3s; }
+    .svc-row:hover { background: var(--bg-white); }
+    
+    /* Hover Image Follower */
+    .hover-img-follower {
+      position: fixed; top: 0; left: 0; width: 350px; height: 450px; pointer-events: none;
+      z-index: 10; opacity: 0; transform: scale(0.8) translate(-50%, -50%);
+      transition: opacity 0.4s, transform 0.4s var(--ease); overflow: hidden;
+    }
+    .hover-img-follower img { width: 100%; height: 100%; object-fit: cover; display: none; }
+    .hover-img-follower img.active { display: block; }
+    body.show-follower .hover-img-follower { opacity: 1; transform: scale(1) translate(-50%, -50%); }
+
+    /* ==========================================================================
+       PRICES (Spreadsheet Style)
+       ========================================================================== */
+    .price-table { width: 100%; border-collapse: collapse; }
+    .price-table th { text-align: left; padding: 20px var(--pad); border-bottom: 1px solid var(--border); font-weight: 500; }
+    .price-table td { padding: 40px var(--pad); border-bottom: 1px solid var(--border); vertical-align: top; }
+    .price-table tr:hover { background: var(--bg-white); }
+
+    /* ==========================================================================
+       PROCESS (Grid Cards)
+       ========================================================================== */
+    .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .process-card { padding: 60px 40px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .process-card:nth-child(3n) { border-right: none; }
+    .process-num { font-size: 14px; font-weight: 700; margin-bottom: 20px; display: inline-block; padding-bottom: 5px; border-bottom: 2px solid var(--text); }
+
+    /* ==========================================================================
+       CASES (Architectural Layout)
+       ========================================================================== */
+    .cases-grid { display: grid; grid-template-columns: 1fr 1fr; }
+    .case-card { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); display: flex; flex-direction: column; }
+    .case-card:nth-child(2n) { border-right: none; }
+    .case-img { height: 60vh; overflow: hidden; }
+    .case-img img { transition: transform 1.2s var(--ease); }
+    .case-card:hover .case-img img { transform: scale(1.05); }
+    .case-info { padding: 30px; display: flex; justify-content: space-between; align-items: center; background: var(--bg-white); }
+
+    /* ==========================================================================
+       FAQ & CONTACT
+       ========================================================================== */
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-head { padding: 30px var(--pad); display: flex; justify-content: space-between; align-items: center; }
+    .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.5s var(--ease); padding: 0 var(--pad); }
+    .faq-item.active .faq-body { max-height: 300px; padding-bottom: 30px; }
+    
+    .contact-sec { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); }
+    .c-info, .c-form-box { padding: clamp(40px, 6vw, 100px); }
+    .c-form-box { background: var(--bg-white); border-left: 1px solid var(--border); }
+    .form-input { width: 100%; border: none; border-bottom: 1px solid var(--border); padding: 20px 0; font-family: inherit; font-size: 18px; background: transparent; margin-bottom: 30px; transition: border-color 0.3s; }
+    .form-input:focus { outline: none; border-color: var(--text); }
+
+    footer { padding: 40px var(--pad); display: flex; justify-content: space-between; border-top: 1px solid var(--border); background: var(--text); color: var(--bg-white); }
+
+    /* ==========================================================================
+       MOBILE RESPONSIVE
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-text-box { border-right: none; border-bottom: 1px solid var(--border); padding: 40px var(--pad); }
+      .hero-img-box { height: 50vh; }
+      .kpi-grid { grid-template-columns: 1fr 1fr; }
+      .kpi-item:nth-child(2) { border-right: none; }
+      .kpi-item:nth-child(1), .kpi-item:nth-child(2) { border-bottom: 1px solid var(--border); }
+      .sec-header { grid-template-columns: 1fr; gap: 20px; }
+      .svc-row { grid-template-columns: 1fr; gap: 20px; padding: 40px var(--pad); }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .process-card:nth-child(2n) { border-right: none; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .case-card { border-right: none; }
+      .contact-sec { grid-template-columns: 1fr; }
+      .c-form-box { border-left: none; border-top: 1px solid var(--border); }
+    }
+
+    @media (max-width: 768px) {
+      * { cursor: auto !important; }
+      .cursor, .hover-img-follower { display: none !important; }
+      .nav { display: none; }
+      .kpi-grid { grid-template-columns: 1fr; }
+      .kpi-item { border-right: none !important; border-bottom: 1px solid var(--border); }
+      .price-table th { display: none; }
+      .price-table td { display: block; border-bottom: none; padding: 10px var(--pad); }
+      .price-table tr { display: block; border-bottom: 1px solid var(--border); padding: 20px 0; }
+      .process-grid { grid-template-columns: 1fr; }
+      .process-card { border-right: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Кастомный курсор (Blend Mode Difference) -->
+  <div class="cursor"><span class="cursor-text">View</span></div>
+
+  <!-- Плавающий элемент для картинок услуг -->
+  <div class="hover-img-follower">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="1" id="img-0">
+    <img src="https://images.unsplash.com/photo-1621293954908-907159247fc8?auto=format&fit=crop&w=600&q=80" alt="2" id="img-1">
+    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80" alt="3" id="img-2">
+    <img src="https://images.unsplash.com/photo-1600566753086-00f18efc2291?auto=format&fit=crop&w=600&q=80" alt="4" id="img-3">
+  </div>
+
+  <div class="topbar t-mono">
+    <span>Махачкала & РД</span>
+    <span>Архитектура / Инженерия / Строительство</span>
+  </div>
+
+  <header>
+    <a href="#" class="logo">DOMA DAG</a>
+    <nav class="nav">
+      <a href="#services" class="hover-target">Услуги</a>
+      <a href="#prices" class="hover-target">Прайс</a>
+      <a href="#cases" class="hover-target">Проекты</a>
+      <a href="#faq" class="hover-target">FAQ</a>
+    </nav>
+    <a href="#contact" class="btn hover-target">Расчет сметы</a>
+  </header>
+
+  <main class="grid-wrap">
+
+    <!-- HERO -->
+    <section class="hero border-b">
+      <div class="hero-text-box border-r">
+        <div>
+          <div class="t-mono reveal">Est. 2018</div>
+          <h1 class="h-huge reveal" style="margin: 20px 0;">Строим<br>Будущее.</h1>
+          <p class="t-body reveal" style="max-width: 400px;">
+            Помогаем пройти путь от идеи до готового дома: проектирование, расчет сметы, строительство, инженерные сети и отделочные работы.
+          </p>
+        </div>
+        <div class="hero-tags reveal">
+          <span>Проект + смета</span>
+          <span>Этапы в договоре</span>
+          <span>Гарантия 5 лет</span>
+        </div>
+      </div>
+      <div class="hero-img-box">
+        <!-- Премиальное архитектурное фото -->
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=100" alt="Современная вилла" class="parallax-img hero-img">
+      </div>
+    </section>
+
+    <!-- KPIs -->
+    <section class="kpi-grid border-b">
+      <div class="kpi-item reveal">
+        <div class="t-mono">Экспертиза</div>
+        <b>4</b>
+        <div class="t-body" style="font-size: 14px;">Направления в одном контуре</div>
+      </div>
+      <div class="kpi-item reveal" style="transition-delay: 0.1s;">
+        <div class="t-mono">Процесс</div>
+        <b>6</b>
+        <div class="t-body" style="font-size: 14px;">Этапов от брифа до сдачи</div>
+      </div>
+      <div class="kpi-item reveal" style="transition-delay: 0.2s;">
+        <div class="t-mono">Управление</div>
+        <b>1</b>
+        <div class="t-body" style="font-size: 14px;">Единая точка ответственности</div>
+      </div>
+      <div class="kpi-item reveal" style="transition-delay: 0.3s;">
+        <div class="t-mono">Надежность</div>
+        <b>5</b>
+        <div class="t-body" style="font-size: 14px;">Лет гарантии на конструктив</div>
+      </div>
+    </section>
+
+    <!-- SERVICES (Structural List + Mouse Follow Image) -->
+    <section id="services" class="services-sec border-b">
+      <div class="sec-header">
+        <h2 class="h-lg reveal">Направления<br>Работ.</h2>
+        <p class="t-body reveal">
+          Сформировано по кластерам: строительство, проектирование, инженерия, отделка. Мы берем на себя ответственность за согласованность всех разделов.
+        </p>
+      </div>
+      
+      <div class="svc-list">
+        <a href="#" class="svc-row svc-hover-trigger" data-img="0">
+          <div class="t-mono">01</div>
+          <h3 class="h-md">Строительство домов</h3>
+          <p class="t-body" style="font-size: 14px;">Фундамент, стены, кровля. Коммерческий интент: сроки, смета, этапы, контроль и сдача объекта.</p>
+        </a>
+        <a href="#" class="svc-row svc-hover-trigger" data-img="1">
+          <div class="t-mono">02</div>
+          <h3 class="h-md">Проектирование</h3>
+          <p class="t-body" style="font-size: 14px;">Архитектурный и конструктивный раздел, подготовка к строительству без потерь времени.</p>
+        </a>
+        <a href="#" class="svc-row svc-hover-trigger" data-img="2">
+          <div class="t-mono">03</div>
+          <h3 class="h-md">Инженерные сети</h3>
+          <p class="t-body" style="font-size: 14px;">Электрика, водоснабжение, канализация и другие системы под конкретный объект.</p>
+        </a>
+        <a href="#" class="svc-row svc-hover-trigger" data-img="3">
+          <div class="t-mono">04</div>
+          <h3 class="h-md">Отделочные работы</h3>
+          <p class="t-body" style="font-size: 14px;">Черновая/чистовая отделка с прозрачной структурой стоимости и контрольными этапами.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- PRICES -->
+    <section id="prices" class="border-b">
+      <div class="sec-header border-b">
+        <h2 class="h-lg reveal">Ценовые<br>Сценарии.</h2>
+        <p class="t-body reveal">Сильный коммерческий интент в выдаче: блок цен должен быть прозрачным и связан с расчетом.</p>
+      </div>
+      <table class="price-table reveal">
+        <thead>
+          <tr class="t-mono">
+            <th>Сценарий</th>
+            <th>Что входит</th>
+            <th>Что важно уточнить</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover-target">
+            <td class="h-md" style="font-size: 24px;">Коробка</td>
+            <td class="t-body">Фундамент, стены, перекрытия, кровля</td>
+            <td class="t-body" style="font-size: 14px;">Геология, площадь, материал стен</td>
+          </tr>
+          <tr class="hover-target">
+            <td class="h-md" style="font-size: 24px;">Контур + Сети</td>
+            <td class="t-body">Коробка + инженерные сети</td>
+            <td class="t-body" style="font-size: 14px;">Состав систем, точки подключения</td>
+          </tr>
+          <tr class="hover-target">
+            <td class="h-md" style="font-size: 24px;">Под ключ</td>
+            <td class="t-body">Проект + стройка + инженерия + отделка</td>
+            <td class="t-body" style="font-size: 14px;">Техническое задание, материалы</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="border-b">
+      <div class="sec-header border-b">
+        <h2 class="h-lg reveal">Процесс<br>В 6 этапов.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-card reveal">
+          <span class="process-num">01 / Бриф</span>
+          <p class="t-body" style="font-size: 15px;">Собираем задачу, ограничения и пожелания.</p>
+        </div>
+        <div class="process-card reveal" style="transition-delay: 0.1s;">
+          <span class="process-num">02 / Расчет</span>
+          <p class="t-body" style="font-size: 15px;">Формируем предварительную смету и сценарии.</p>
+        </div>
+        <div class="process-card reveal" style="transition-delay: 0.2s;">
+          <span class="process-num">03 / Договор</span>
+          <p class="t-body" style="font-size: 15px;">Фиксируем этапы, условия и контрольные точки.</p>
+        </div>
+        <div class="process-card reveal">
+          <span class="process-num">04 / Проект</span>
+          <p class="t-body" style="font-size: 15px;">Готовим архитектурные и инженерные решения.</p>
+        </div>
+        <div class="process-card reveal" style="transition-delay: 0.1s;">
+          <span class="process-num">05 / Реализация</span>
+          <p class="t-body" style="font-size: 15px;">Строительство, инженерия, отделка по маршруту.</p>
+        </div>
+        <div class="process-card reveal" style="transition-delay: 0.2s;">
+          <span class="process-num">06 / Сдача</span>
+          <p class="t-body" style="font-size: 15px;">Финальная проверка, передача объекта.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases" class="border-b">
+      <div class="sec-header border-b">
+        <h2 class="h-lg reveal">Кейсы.</h2>
+      </div>
+      <div class="cases-grid">
+        <a href="#" class="case-card hover-img-target">
+          <div class="case-img"><img src="https://images.unsplash.com/photo-1613490908653-b09b578e3518?auto=format&fit=crop&w=1200&q=80" alt="Кейс 1" class="parallax-img"></div>
+          <div class="case-info">
+            <h3 class="h-md" style="font-size: 20px;">Резиденция Каспий</h3>
+            <span class="t-mono">Под ключ</span>
+          </div>
+        </a>
+        <a href="#" class="case-card hover-img-target">
+          <div class="case-img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Кейс 2" class="parallax-img"></div>
+          <div class="case-info">
+            <h3 class="h-md" style="font-size: 20px;">Вилла Горы</h3>
+            <span class="t-mono">Архитектура</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="border-b">
+      <div class="sec-header border-b">
+        <h2 class="h-lg reveal">FAQ.</h2>
+      </div>
+      <div>
+        <div class="faq-item hover-target">
+          <div class="faq-head h-md" style="font-size: 22px;">Сколько стоит построить дом в Дагестане?</div>
+          <div class="faq-body"><p class="t-body" style="padding-top: 20px;">Стоимость зависит от площади, материалов, инженерных разделов и объема отделки. Предварительный диапазон дается по брифу, точная смета формируется после согласования ТЗ.</p></div>
+        </div>
+        <div class="faq-item hover-target">
+          <div class="faq-head h-md" style="font-size: 22px;">Можно ли начать только с проектирования?</div>
+          <div class="faq-body"><p class="t-body" style="padding-top: 20px;">Да. Можно заказать только проектную стадию, включая архитектуру, конструктив и инженерные решения, а строительно-монтажные работы запускать позже.</p></div>
+        </div>
+        <div class="faq-item hover-target">
+          <div class="faq-head h-md" style="font-size: 22px;">Что влияет на сроки строительства?</div>
+          <div class="faq-body"><p class="t-body" style="padding-top: 20px;">На сроки влияют технология, площадь дома, сезонность и состав работ. Этапы и контрольные точки фиксируются в договоре.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-sec">
+      <div class="c-info">
+        <h2 class="h-huge reveal">Let's<br>Talk.</h2>
+        <div class="reveal" style="margin-top: 60px;">
+          <div class="t-mono" style="margin-bottom: 10px;">Контакты</div>
+          <a href="tel:+70000000000" class="h-md hover-target">+7 (000) 000-00-00</a><br>
+          <a href="mailto:hello@domadag.ru" class="h-md hover-target" style="font-size: 20px; color: var(--text-muted);">hello@domadag.ru</a>
+        </div>
+      </div>
+      <div class="c-form-box">
+        <div class="t-mono reveal" style="margin-bottom: 40px;">Получите персональный план работ</div>
+        <form class="reveal" onsubmit="event.preventDefault(); alert('Demo Submit');">
+          <input type="text" class="form-input" placeholder="Ваше имя" required>
+          <input type="tel" class="form-input" placeholder="Телефон" required>
+          <select class="form-input" required style="color: var(--text-muted);">
+            <option value="" disabled selected>Интересующее направление</option>
+            <option style="color: var(--text);">Строительство под ключ</option>
+            <option style="color: var(--text);">Только проект</option>
+            <option style="color: var(--text);">Отделочные работы</option>
+          </select>
+          <button type="submit" class="btn hover-target" style="width: 100%; margin-top: 20px;">Отправить заявку</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="t-mono">© 2026 DOMA DAG</div>
+    <div class="t-mono">Designed in ARHDM Style</div>
+  </footer>
+
+  <!-- СКРИПТЫ -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      // 1. Lenis Smooth Scroll
+      const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+      function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+
+      // 2. Custom Cursor (Blend mode)
+      const cursor = document.querySelector('.cursor');
+      if (window.innerWidth > 768 && cursor) {
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX; mouseY = e.clientY;
+          cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+        });
+
+        document.querySelectorAll('a, button, input, select, .hover-target').forEach(el => {
+          el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+        });
+        
+        document.querySelectorAll('.hover-img-target').forEach(el => {
+          el.addEventListener('mouseenter', () => document.body.classList.add('hovering-img'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('hovering-img'));
+        });
+      }
+
+      // 3. Image Follower for Services (ARHDM/Behance Style Effect)
+      const follower = document.querySelector('.hover-img-follower');
+      const svcTriggers = document.querySelectorAll('.svc-hover-trigger');
+      const followerImgs = follower.querySelectorAll('img');
+
+      if (window.innerWidth > 1024) {
+        let fX = window.innerWidth / 2, fY = window.innerHeight / 2;
+        let tX = fX, tY = fY;
+        
+        window.addEventListener('mousemove', (e) => { tX = e.clientX; tY = e.clientY; });
+
+        const renderFollower = () => {
+          fX += (tX - fX) * 0.1; fY += (tY - fY) * 0.1; // Smooth lerp
+          follower.style.transform = `translate3d(${fX}px, ${fY}px, 0) scale(${document.body.classList.contains('show-follower') ? 1 : 0.8})`;
+          requestAnimationFrame(renderFollower);
+        };
+        requestAnimationFrame(renderFollower);
+
+        svcTriggers.forEach(trigger => {
+          trigger.addEventListener('mouseenter', () => {
+            document.body.classList.add('show-follower');
+            const imgId = trigger.getAttribute('data-img');
+            followerImgs.forEach(img => img.classList.remove('active'));
+            document.getElementById(`img-${imgId}`).classList.add('active');
+          });
+          trigger.addEventListener('mouseleave', () => {
+            document.body.classList.remove('show-follower');
+          });
+        });
+      }
+
+      // 4. Scroll Reveals (Intersection Observer)
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('in-view');
+        });
+      }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      // 5. Image Parallax
+      const parImgs = document.querySelectorAll('.parallax-img');
+      lenis.on('scroll', (e) => {
+        parImgs.forEach(img => {
+          img.style.transform = `translate3d(0, ${e.animatedScroll * 0.08}px, 0) scale(1.05)`;
+        });
+      });
+
+      // 6. FAQ Accordion Logic
+      document.querySelectorAll('.faq-head').forEach(head => {
+        head.addEventListener('click', () => {
+          const parent = head.parentElement;
+          const isActive = parent.classList.contains('active');
+          document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+          if (!isActive) parent.classList.add('active');
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

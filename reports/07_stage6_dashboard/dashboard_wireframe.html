@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dashboard Wireframe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6fa;--card:#fff;--line:#dce4ef;--ink:#17212f;--ok:#0f8f6f;--warn:#b7682f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Manrope,sans-serif;color:var(--ink)}
+.wrap{width:min(1120px,94vw);margin:0 auto;padding:24px 0 40px}.grid{display:grid;gap:12px}.kpis{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}.metric{font-size:28px;font-weight:700}.delta.ok{color:var(--ok)}.delta.warn{color:var(--warn)}
+.panels{grid-template-columns:2fr 1fr;margin-top:12px}.chart{height:220px;background:linear-gradient(180deg,#fff,#f9fbff);border:1px dashed #cbd8ea;border-radius:12px;padding:10px}
+.table{width:100%;border-collapse:collapse}.table td,.table th{padding:8px;border-bottom:1px solid #e5edf8;text-align:left}
+@media(max-width:920px){.kpis{grid-template-columns:1fr 1fr}.panels{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<h1>SEO + CRO Dashboard (wireframe)</h1>
+<div class="grid kpis">
+  <div class="card"><div>Органический трафик</div><div class="metric">TBD</div><div class="delta ok">+WoW</div></div>
+  <div class="card"><div>Лиды из органики</div><div class="metric">TBD</div><div class="delta ok">+WoW</div></div>
+  <div class="card"><div>Top-10 ключи</div><div class="metric">TBD</div><div class="delta ok">+MoM</div></div>
+  <div class="card"><div>AEO упоминания</div><div class="metric">TBD</div><div class="delta warn">monitor</div></div>
+</div>
+<div class="grid panels">
+  <div class="card"><h3>Динамика позиций/трафика</h3><div class="chart">Line chart placeholder</div></div>
+  <div class="card"><h3>Топ кластеры</h3><table class="table"><tr><th>Кластер</th><th>Статус</th></tr><tr><td>Строительство</td><td>in progress</td></tr><tr><td>Проектирование</td><td>in progress</td></tr><tr><td>Инженерия</td><td>planned</td></tr><tr><td>Отделка</td><td>planned</td></tr></table></div>
+</div>
+</div></body></html>

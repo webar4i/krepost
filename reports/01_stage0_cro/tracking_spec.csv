@@ -1,0 +1,13 @@
+Event;Platform (GA4/Metrika);Trigger;Parameters;Conversion (yes/no);Notes
+form_submit;GA4+Metrika;submit on lead form;form_id,page_type,service,utm_source;yes;Deduplicate by lead_id/session_id
+call_click;Metrika;click tel: link;page_type,service;yes;Integrate with calltracking (TBD)
+whatsapp_click;GA4+Metrika;click wa/whatsapp link;page_type,service;no;Microconversion
+telegram_click;GA4+Metrika;click telegram link;page_type,service;no;Microconversion
+price_view;GA4;view prices block >= 5 sec;page_type,service;no;Intent-strength signal
+quiz_start;GA4;start cost quiz;page_type,service;no;Top-funnel
+quiz_complete;GA4+Metrika;quiz submitted;page_type,service,budget_band;yes;Strong lead signal
+case_view;GA4;open case card/detail;service,case_id;no;Trust signal
+scroll_50;GA4;scroll depth >= 50%;page_type;no;Engagement
+scroll_90;GA4;scroll depth >= 90%;page_type;no;Engagement
+cta_click_primary;GA4+Metrika;click primary CTA;cta_id,page_type,service;no;CRO baseline
+faq_expand;GA4;expand FAQ item;faq_id,page_type;no;AEO/intent signal

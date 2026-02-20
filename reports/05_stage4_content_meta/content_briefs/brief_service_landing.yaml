@@ -1,0 +1,10 @@
+content_brief:
+  url: "/services/stroitelstvo-domov-pod-klyuch-mahachkala/"
+  page_type: "service_landing"
+  main_query: "строительство домов под ключ махачкала"
+  intent: "commercial"
+  serp_requirements:
+    must_have_blocks: ["hero", "price", "process", "cases", "reviews", "faq", "cta"]
+  key_entities: ["смета", "договор", "гарантия", "этапы", "материалы"]
+  citations_required: false
+  primary_cta: "Рассчитать стоимость"

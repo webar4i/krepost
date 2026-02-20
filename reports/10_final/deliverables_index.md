@@ -1,0 +1,60 @@
+# Deliverables Index
+
+Generated: 2026-02-20
+
+Total files: 54
+
+- `reports/00_meta/assumptions.md`
+- `reports/00_meta/data_sources.md`
+- `reports/00_meta/glossary.md`
+- `reports/00_meta/project_brief.yaml`
+- `reports/01_stage0_cro/cro_hypotheses.csv`
+- `reports/01_stage0_cro/kpi_tree.yaml`
+- `reports/01_stage0_cro/tracking_spec.csv`
+- `reports/02_stage1_competitors/competitive_landscape.yaml`
+- `reports/02_stage1_competitors/competitor_features_matrix.csv`
+- `reports/02_stage1_competitors/competitor_notes.md`
+- `reports/02_stage1_competitors/competitors_aggregators.csv`
+- `reports/02_stage1_competitors/competitors_direct.csv`
+- `reports/02_stage1_competitors/serp_snapshot.csv`
+- `reports/02_stage1_competitors/swot_top_competitors.md`
+- `reports/03_stage2_semantics/aeo_qa_matrix.csv`
+- `reports/03_stage2_semantics/clustering_matrix.csv`
+- `reports/03_stage2_semantics/cocoon_hypotheses.csv`
+- `reports/03_stage2_semantics/intent_persona_matrix.csv`
+- `reports/03_stage2_semantics/semantic_core_clean.csv`
+- `reports/03_stage2_semantics/semantic_questions_bank.csv`
+- `reports/03_stage2_semantics/serp_driven_mapping.csv`
+- `reports/04_stage3_architecture/linking_horizontal.csv`
+- `reports/04_stage3_architecture/linking_vertical.md`
+- `reports/04_stage3_architecture/scaling_policy.md`
+- `reports/04_stage3_architecture/site_architecture.csv`
+- `reports/05_stage4_content_meta/aeo_llm_blocks.md`
+- `reports/05_stage4_content_meta/content_briefs/brief_guide_pillar.yaml`
+- `reports/05_stage4_content_meta/content_briefs/brief_prices.yaml`
+- `reports/05_stage4_content_meta/content_briefs/brief_service_landing.yaml`
+- `reports/05_stage4_content_meta/content_qa_checklist.csv`
+- `reports/05_stage4_content_meta/entity_trust_kit.md`
+- `reports/05_stage4_content_meta/page_templates.md`
+- `reports/05_stage4_content_meta/proof_matrix.csv`
+- `reports/05_stage4_content_meta/schema_jsonld_examples.md`
+- `reports/05_stage4_content_meta/seo_elements_table.csv`
+- `reports/06_stage5_prototypes/guide_pillar_prototype.html`
+- `reports/06_stage5_prototypes/home_prototype.html`
+- `reports/06_stage5_prototypes/mobile_notes.md`
+- `reports/06_stage5_prototypes/service_landing_prototype.html`
+- `reports/07_stage6_dashboard/aeo_monitoring_log.csv`
+- `reports/07_stage6_dashboard/dashboard_data_dictionary.csv`
+- `reports/07_stage6_dashboard/dashboard_spec.md`
+- `reports/07_stage6_dashboard/dashboard_wireframe.html`
+- `reports/07_stage6_dashboard/kpi_targets.yaml`
+- `reports/08_stage7_offpage_local/link_gap_summary.md`
+- `reports/08_stage7_offpage_local/local_profiles_plan.csv`
+- `reports/08_stage7_offpage_local/pr_links_mentions_plan.csv`
+- `reports/08_stage7_offpage_local/review_reputation_plan.csv`
+- `reports/09_stage8_release_qa/first_14_days_monitoring.md`
+- `reports/09_stage8_release_qa/launch_gate_checklist.md`
+- `reports/09_stage8_release_qa/release_qa_log.csv`
+- `reports/10_final/executive_summary.md`
+- `reports/10_final/strategic_roadmap_6_12_months.md`
+- `reports/10_final/traffic_conversion_forecast.md`

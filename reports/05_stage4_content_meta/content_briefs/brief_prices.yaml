@@ -1,0 +1,10 @@
+content_brief:
+  url: "/tseny/stroitelstvo-domov-v-dagestane/"
+  page_type: "prices"
+  main_query: "сколько стоит построить дом в дагестане"
+  intent: "commercial"
+  serp_requirements:
+    must_have_blocks: ["short_answer", "pricing_table", "cost_factors", "faq", "cta"]
+  key_entities: ["площадь", "материал", "инженерия", "этапы", "смета"]
+  citations_required: true
+  primary_cta: "Получить смету"

@@ -1,0 +1,11 @@
+Откуда;Куда;Якорный текст;Тип;Место;Приоритет
+/services/stroitelstvo-domov-pod-klyuch-mahachkala/;/tseny/stroitelstvo-domov-v-dagestane/;цены на строительство домов;Contextual;в блоке цены;CRITICAL
+/services/stroitelstvo-domov-pod-klyuch-mahachkala/;/raboty/;примеры реализованных домов;Contextual;после блока кейсов;HIGH
+/services/stroitelstvo-domov-pod-klyuch-mahachkala/;/otzyvy/;отзывы клиентов;Contextual;после social proof;HIGH
+/services/proektirovanie-domov-mahachkala/;/services/proekt-inzhenernyh-setey-mahachkala/;инженерные разделы проекта;Contextual;"внутри раздела ""что входит""";HIGH
+/services/otdelochnye-raboty-mahachkala/;/tseny/otdelochnye-raboty-mahachkala/;цены на отделочные работы;Contextual;в блоке стоимости;CRITICAL
+/guides/stroitelstvo/oshibki-pri-vybore-podryadchika/;/services/stroitelstvo-domov-pod-klyuch-mahachkala/;заказать строительство дома под ключ;Contextual;CTA в конце;CRITICAL
+/guides/proektirovanie/chto-vhodit-v-proekt/;/services/proektirovanie-domov-mahachkala/;заказать проект дома;Contextual;CTA в конце;CRITICAL
+/guides/inzheneriya/vodosnabzhenie-i-kanalizaciya/;/services/proekt-inzhenernyh-setey-mahachkala/;получить проект инженерных сетей;Contextual;CTA в конце;CRITICAL
+/guides/otdelka/chernovaya-vs-chistovaya/;/services/otdelochnye-raboty-mahachkala/;заказать отделочные работы;Contextual;CTA в конце;CRITICAL
+/faq/;/services/;перейти к услугам;Related;в каждом ответе;MEDIUM

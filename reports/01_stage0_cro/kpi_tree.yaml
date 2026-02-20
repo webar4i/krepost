@@ -1,0 +1,16 @@
+conversion_model:
+  primary:
+    name: "qualified_lead"
+    counted_as: "lead"
+    definition: "Заявка/звонок с подтвержденным интересом к услуге в Махачкале/Дагестане"
+  secondary:
+    - name: "call_click"
+    - name: "whatsapp_click"
+    - name: "telegram_click"
+    - name: "price_view"
+    - name: "quiz_start"
+    - name: "quiz_complete"
+    - name: "case_view"
+  lead_quality:
+    definition: "Есть контакт + тип услуги + ориентировочный бюджет/срок"
+    source_of_truth: "CRM (TBD)"

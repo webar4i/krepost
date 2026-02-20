@@ -1,0 +1,4 @@
+Date;Engine;Region;Prompt/Query;Mentioned (yes/no);Cited URL;Position/Type;Notes;Action
+2026-02-20;ChatGPT;Makhachkala;"""Сколько стоит построить дом в Дагестане?""";no;;not_cited;Нет собственного домена в индексе/цитировании;Публиковать /tseny/ и усилить proof блоки
+2026-02-20;Perplexity;Makhachkala;"""Как выбрать подрядчика для строительства дома?""";no;;not_cited;Преобладают агрегаторы/каталоги;Запустить guide + FAQ + external mentions
+2026-02-20;Yandex Neuro;Makhachkala;"""Проектирование домов Махачкала""";no;;not_cited;Нет устойчивых бренд-сигналов;Усилить local profiles и цитируемые ответы
