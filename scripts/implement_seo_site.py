@@ -872,7 +872,149 @@ def page_contact_section(page_type: str, service_slug: str):
 
 
 def header_block():
-    return f'''\n  <div class="topbar t-mono">\n    <span>Махачкала & РД</span>\n    <span>Строительство / Проектирование / Инженерия / Отделка</span>\n  </div>\n\n  <header>\n    <a href="/" class="logo hover-target" aria-label="Крепость - главная">\n      <span class="logo-mark" aria-hidden="true">\n        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">\n          <path d="M8 14 32 5l24 9v15c0 15-9 25-24 30C17 54 8 44 8 29V14Zm8 5v10h9v-7h14v7h9V19L32 13 16 19Zm0 18c2 6 7 11 16 15 9-4 14-9 16-15H16Z" fill="currentColor"></path>\n        </svg>\n      </span>\n      <span class="logo-text">Крепость</span>\n    </a>\n    <nav class="nav" aria-label="Основная навигация">\n      <a href="/services/proektirovanie-domov-mahachkala/" class="hover-target">Каталог проектов</a>\n      <a href="/raboty/" class="hover-target">Построенные дома</a>\n      <a href="/services/" class="hover-target">Услуги</a>\n      <a href="/kontakty/" class="hover-target">Контакты</a>\n    </nav>\n    <div class="header-actions">\n      <a href="tel:{PHONE_RAW}" class="header-phone-chip hover-target" data-event="call_click" data-cta-id="header_phone">\n        <span class="header-phone-icon" aria-hidden="true">☎</span>\n        <span class="header-phone-meta">\n          <b>8 903 526-25-26</b>\n          <small>Махачкала и РД</small>\n        </span>\n      </a>\n      <a href="https://t.me/share/url?url=https://krepostdom.ru&text=Здравствуйте!%20Интересует%20строительство%20дома." target="_blank" rel="noopener" class="msg-btn msg-btn-tg hover-target" data-event="cta_click_primary" data-cta-id="header_telegram">Telegram</a>\n      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="msg-btn msg-btn-wa hover-target" data-event="cta_click_primary" data-cta-id="header_whatsapp">WhatsApp</a>\n      <button class="menu-toggle hover-target" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">\n        <span></span><span></span><span></span>\n      </button>\n    </div>\n  </header>\n\n  <div class="mobile-nav-overlay"></div>\n  <aside class="mobile-nav" id="mobile-nav" aria-label="Боковое меню">\n    <div class="mobile-nav-top">\n      <div class="t-mono">Разделы сайта</div>\n      <button class="mobile-close hover-target" type="button" aria-label="Закрыть меню">Закрыть</button>\n    </div>\n    <nav class="mobile-nav-links">\n      <a href="/" class="hover-target">Главная</a>\n      <a href="/services/" class="hover-target">Услуги</a>\n      <a href="/tseny/" class="hover-target">Цены</a>\n      <a href="/raboty/" class="hover-target">Кейсы</a>\n      <a href="/otzyvy/" class="hover-target">Отзывы</a>\n      <a href="/faq/" class="hover-target">FAQ</a>\n      <a href="/guides/" class="hover-target">Гайды</a>\n      <a href="/o-kompanii/" class="hover-target">О компании</a>\n      <a href="/kontakty/" class="hover-target">Контакты</a>\n    </nav>\n    <div class="mobile-nav-secondary t-mono">\n      <a href="/services/stroitelstvo-domov-pod-klyuch-mahachkala/" class="hover-target">Строительство</a>\n      <a href="/services/proektirovanie-domov-mahachkala/" class="hover-target">Проектирование</a>\n      <a href="/services/proekt-inzhenernyh-setey-mahachkala/" class="hover-target">Инженерия</a>\n      <a href="/services/otdelochnye-raboty-mahachkala/" class="hover-target">Отделка</a>\n    </div>\n    <div class="mobile-nav-cta">\n      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="btn hover-target" data-event="cta_click_primary" data-cta-id="mobile_whatsapp">Написать в WhatsApp</a>\n      <a href="https://t.me/share/url?url=https://krepostdom.ru&text=Здравствуйте!%20Интересует%20строительство%20дома." target="_blank" rel="noopener" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_telegram">Написать в Telegram</a>\n      <a href="#contact" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_estimate">Получить смету</a>\n    </div>\n  </aside>\n'''
+    return f"""
+  <div class="topbar t-mono">
+    <span>Махачкала & РД</span>
+    <span>Строительство / Проектирование / Инженерия / Отделка</span>
+  </div>
+
+  <header>
+    <a href="/" class="logo hover-target" aria-label="Крепость - главная">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <path d="M8 14 32 5l24 9v15c0 15-9 25-24 30C17 54 8 44 8 29V14Zm8 5v10h9v-7h14v7h9V19L32 13 16 19Zm0 18c2 6 7 11 16 15 9-4 14-9 16-15H16Z" fill="currentColor"></path>
+        </svg>
+      </span>
+      <span class="logo-text">Крепость</span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="/services/" class="hover-target">Услуги</a>
+      <a href="/tseny/" class="hover-target">Цены</a>
+      <a href="/raboty/" class="hover-target">Построенные дома</a>
+      <a href="/otzyvy/" class="hover-target">Отзывы</a>
+      <a href="/kontakty/" class="hover-target">Контакты</a>
+      <div class="nav-mega-wrap">
+        <button class="nav-mega-trigger hover-target" type="button" aria-expanded="false" aria-controls="mega-menu">Все разделы</button>
+        <div class="mega-menu" id="mega-menu" aria-label="Полная структура сайта">
+          <div class="mega-top">
+            <div>
+              <h4>Выберите формат работ и перейдите на нужную страницу</h4>
+              <p>Хабы и посадочные по услугам, ценам, кейсам, отзывам и FAQ для быстрого принятия решения.</p>
+            </div>
+            <div class="mega-chips">
+              <span class="mega-chip">коммерческие страницы</span>
+              <span class="mega-chip">локальное SEO</span>
+              <span class="mega-chip">прямые CTA</span>
+            </div>
+          </div>
+
+          <div class="mega-quick-grid">
+            <a href="/services/" class="mega-quick-link hover-target">
+              <b>Подобрать услугу</b>
+              <span>Сразу перейти к направлениям работ</span>
+            </a>
+            <a href="/tseny/" class="mega-quick-link hover-target">
+              <b>Понять бюджет</b>
+              <span>Сценарии стоимости и факторы цены</span>
+            </a>
+            <a href="/raboty/" class="mega-quick-link hover-target">
+              <b>Посмотреть кейсы</b>
+              <span>Реальные объекты и решения по этапам</span>
+            </a>
+          </div>
+
+          <div class="mega-grid">
+            <div class="mega-col">
+              <div class="mega-title">Услуги</div>
+              <a href="/services/" class="mega-link hover-target"><b>Все услуги</b><span>Хаб коммерческих страниц</span></a>
+              <a href="/services/stroitelstvo-domov-pod-klyuch-mahachkala/" class="mega-link hover-target"><b>Строительство под ключ</b><span>Полный цикл в одном контуре</span></a>
+              <a href="/services/proektirovanie-domov-mahachkala/" class="mega-link hover-target"><b>Проектирование домов</b><span>АР/КР и подготовка к стройке</span></a>
+              <a href="/services/proekt-inzhenernyh-setey-mahachkala/" class="mega-link hover-target"><b>Инженерные сети</b><span>Электрика, вода, канализация, отопление</span></a>
+              <a href="/services/otdelochnye-raboty-mahachkala/" class="mega-link hover-target"><b>Отделочные работы</b><span>Черновая и чистовая отделка</span></a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-title">Цены</div>
+              <a href="/tseny/" class="mega-link hover-target"><b>Цены по направлениям</b><span>Главный ценовой хаб</span></a>
+              <a href="/tseny/stroitelstvo-domov-v-dagestane/" class="mega-link hover-target"><b>Цена строительства дома</b><span>Сценарии стоимости по Дагестану</span></a>
+              <a href="/tseny/otdelochnye-raboty-mahachkala/" class="mega-link hover-target"><b>Цена отделочных работ</b><span>Прайс по Махачкале</span></a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-title">Доверие</div>
+              <a href="/raboty/" class="mega-link hover-target"><b>Кейсы и объекты</b><span>Реальные проекты и результаты</span></a>
+              <a href="/otzyvy/" class="mega-link hover-target"><b>Отзывы клиентов</b><span>Публичные trust-сигналы</span></a>
+              <a href="/o-kompanii/" class="mega-link hover-target"><b>О компании</b><span>Команда и подход к работе</span></a>
+              <a href="/kontakty/" class="mega-link hover-target"><b>Контакты</b><span>Махачкала и Республика Дагестан</span></a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-title">FAQ и Гайды</div>
+              <a href="/faq/" class="mega-link hover-target"><b>FAQ</b><span>Короткие ответы по цене и срокам</span></a>
+              <a href="/guides/" class="mega-link hover-target"><b>Все гайды</b><span>Инфо-контент по кластерам</span></a>
+              <a href="/guides/stroitelstvo/oshibki-pri-vybore-podryadchika/" class="mega-link hover-target"><b>Как выбрать подрядчика</b><span>Чек-лист перед стартом</span></a>
+              <a href="/guides/proektirovanie/chto-vhodit-v-proekt/" class="mega-link hover-target"><b>Состав проекта дома</b><span>Что входит и зачем нужно</span></a>
+              <a href="/guides/inzheneriya/vodosnabzhenie-i-kanalizaciya/" class="mega-link hover-target"><b>Инженерия: вода и канализация</b><span>Базовые решения для дома</span></a>
+              <a href="/guides/otdelka/chernovaya-vs-chistovaya/" class="mega-link hover-target"><b>Черновая vs чистовая отделка</b><span>Разница по этапам и бюджету</span></a>
+            </div>
+          </div>
+
+          <div class="mega-cta">
+            <p class="mega-cta-note">
+              <b>Нужен быстрый маршрут по сайту?</b>
+              Напишите в WhatsApp/Telegram или получите смету по вашей задаче.
+            </p>
+            <div class="mega-cta-actions">
+              <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mega_whatsapp">WhatsApp</a>
+              <a href="#contact" class="btn hover-target" data-event="cta_click_primary" data-cta-id="mega_estimate">Получить смету</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:{PHONE_RAW}" class="header-phone-chip hover-target" data-event="call_click" data-cta-id="header_phone">
+        <span class="header-phone-icon" aria-hidden="true">☎</span>
+        <span class="header-phone-meta">
+          <b>8 903 526-25-26</b>
+          <small>Махачкала и РД</small>
+        </span>
+      </a>
+      <a href="https://t.me/share/url?url=https://krepostdom.ru&text=Здравствуйте!%20Интересует%20строительство%20дома." target="_blank" rel="noopener" class="msg-btn msg-btn-tg hover-target" data-event="cta_click_primary" data-cta-id="header_telegram">Telegram</a>
+      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="msg-btn msg-btn-wa hover-target" data-event="cta_click_primary" data-cta-id="header_whatsapp">WhatsApp</a>
+      <button class="menu-toggle hover-target" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav" id="mobile-nav" aria-label="Боковое меню">
+    <div class="mobile-nav-top">
+      <div class="t-mono">Разделы сайта</div>
+      <button class="mobile-close hover-target" type="button" aria-label="Закрыть меню">Закрыть</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="/" class="hover-target">Главная</a>
+      <a href="/services/" class="hover-target">Услуги</a>
+      <a href="/tseny/" class="hover-target">Цены</a>
+      <a href="/raboty/" class="hover-target">Кейсы</a>
+      <a href="/otzyvy/" class="hover-target">Отзывы</a>
+      <a href="/faq/" class="hover-target">FAQ</a>
+      <a href="/guides/" class="hover-target">Гайды</a>
+      <a href="/o-kompanii/" class="hover-target">О компании</a>
+      <a href="/kontakty/" class="hover-target">Контакты</a>
+    </nav>
+    <div class="mobile-nav-secondary t-mono">
+      <a href="/services/stroitelstvo-domov-pod-klyuch-mahachkala/" class="hover-target">Строительство</a>
+      <a href="/services/proektirovanie-domov-mahachkala/" class="hover-target">Проектирование</a>
+      <a href="/services/proekt-inzhenernyh-setey-mahachkala/" class="hover-target">Инженерия</a>
+      <a href="/services/otdelochnye-raboty-mahachkala/" class="hover-target">Отделка</a>
+    </div>
+    <div class="mobile-nav-cta">
+      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="btn hover-target" data-event="cta_click_primary" data-cta-id="mobile_whatsapp">Написать в WhatsApp</a>
+      <a href="https://t.me/share/url?url=https://krepostdom.ru&text=Здравствуйте!%20Интересует%20строительство%20дома." target="_blank" rel="noopener" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_telegram">Написать в Telegram</a>
+      <a href="#contact" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_estimate">Получить смету</a>
+    </div>
+  </aside>
+"""
 
 
 def footer_block():

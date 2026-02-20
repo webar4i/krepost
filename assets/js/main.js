@@ -106,6 +106,9 @@
         });
 
         window.addEventListener('resize', () => {
+          if (window.innerWidth > 1024 && document.body.classList.contains('menu-open')) {
+            closeMobileNav();
+          }
           if (window.innerWidth <= 1024 && document.body.classList.contains('show-follower')) {
             document.body.classList.remove('show-follower');
           }
