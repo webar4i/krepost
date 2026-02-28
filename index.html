@@ -21,6 +21,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/site.webmanifest" />
+  
+  <!-- Analytics Configuration -->
+  <script src="/assets/js/analytics-config.js"></script>
+  
+  <!-- Дополнительные мета-теги для SEO -->
+  <meta name="keywords" content="строительство домов махачкала, строительство домов дагестан, проектирование домов махачкала, отделочные работы махачкала, строительство под ключ" />
+  <meta name="author" content="КРЕПОСТЬ" />
+  <meta name="geo.region" content="RU-DA" />
+  <meta name="geo.placename" content="Махачкала" />
 
   <!-- Lenis: Плавный скролл -->
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
@@ -32,11 +41,36 @@
     "@graph":[
       {
         "@type": "LocalBusiness",
+        "@id": "https://krepostdom.ru/#business",
         "name": "КРЕПОСТЬ",
         "url": "https://krepostdom.ru/",
+        "telephone": "+7-XXX-XXX-XX-XX",
+        "email": "info@krepostdom.ru",
+        "priceRange": "₽₽₽",
         "areaServed": [
           "Махачкала",
           "Республика Дагестан"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "[УЛИЦА, ДОМ]",
+          "addressLocality": "Махачкала",
+          "addressRegion": "Республика Дагестан",
+          "postalCode": "[ИНДЕКС]",
+          "addressCountry": "RU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "[ШИРОТA]",
+          "longitude": "[ДОЛГОТА]"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "sameAs": [
+          "[Яндекс.Карты]",
+          "[2GIS]",
+          "[Google Maps]",
+          "[Instagram]",
+          "[VK]"
         ],
         "makesOffer": [
           {
@@ -135,8 +169,22 @@
     <img src="https://images.unsplash.com/photo-1600566753086-00f18efc2291?auto=format&fit=crop&w=600&q=80" alt="4" id="img-3">
   </div>
 
+  <!-- Schema.org LocalBusiness для header -->
+  <div itemscope itemtype="https://schema.org/LocalBusiness" style="display:none;">
+    <span itemprop="name">КРЕПОСТЬ</span>
+    <span itemprop="telephone">+7-903-526-25-26</span>
+    <span itemprop="email">info@krepostdom.ru</span>
+    <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      <span itemprop="streetAddress">[УЛИЦА, ДОМ]</span>,
+      <span itemprop="addressLocality">Махачкала</span>,
+      <span itemprop="addressRegion">Республика Дагестан</span>
+    </span>
+    <span itemprop="openingHours">Mo-Fr 09:00-18:00</span>
+    <span itemprop="openingHours">Sa 10:00-15:00</span>
+  </div>
+
   <div class="topbar t-mono">
-    <span>Махачкала & РД</span>
+    <span>📍 г. Махачкала, [Улица] • Пн-Пт: 9:00-18:00, Сб: 10:00-15:00</span>
     <span>Строительство / Проектирование / Инженерия / Отделка</span>
   </div>
 
@@ -224,7 +272,7 @@
               Напишите в WhatsApp/Telegram или получите смету по вашей задаче.
             </p>
             <div class="mega-cta-actions">
-              <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mega_whatsapp">WhatsApp</a>
+              <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener noreferrer nofollow" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mega_whatsapp">WhatsApp</a>
               <a href="#contact" class="btn hover-target" data-event="cta_click_primary" data-cta-id="mega_estimate">Получить смету</a>
             </div>
           </div>
@@ -232,15 +280,15 @@
       </div>
     </nav>
     <div class="header-actions">
-      <a href="tel:+79035262526" class="header-phone-chip hover-target" data-event="call_click" data-cta-id="header_phone">
+      <a href="tel:+79035262526" class="header-phone-chip hover-target" data-event="call_click" data-cta-id="header_phone" itemprop="telephone">
         <span class="header-phone-icon" aria-hidden="true">☎</span>
         <span class="header-phone-meta">
-          <b>8 903 526-25-26</b>
+          <b>+7 (903) 526-25-26</b>
           <small>Махачкала и РД</small>
         </span>
       </a>
-      <a href="https://t.me/share/url?url=https://krepostdom.ru&text=Здравствуйте!%20Интересует%20строительство%20дома." target="_blank" rel="noopener" class="msg-btn msg-btn-tg hover-target" data-event="cta_click_primary" data-cta-id="header_telegram">Telegram</a>
-      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="msg-btn msg-btn-wa hover-target" data-event="cta_click_primary" data-cta-id="header_whatsapp">WhatsApp</a>
+      <a href="https://t.me/krepostdom" target="_blank" rel="noopener noreferrer nofollow" class="msg-btn msg-btn-tg hover-target" data-event="cta_click_primary" data-cta-id="header_telegram">Telegram</a>
+      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener noreferrer nofollow" class="msg-btn msg-btn-wa hover-target" data-event="cta_click_primary" data-cta-id="header_whatsapp">WhatsApp</a>
       <button class="menu-toggle hover-target" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">
         <span></span>
         <span></span>
@@ -276,8 +324,8 @@
     </div>
 
     <div class="mobile-nav-cta">
-      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="btn hover-target" data-event="cta_click_primary" data-cta-id="mobile_whatsapp">Написать в WhatsApp</a>
-      <a href="https://t.me/share/url?url=https://krepostdom.ru&text=Здравствуйте!%20Интересует%20строительство%20дома." target="_blank" rel="noopener" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_telegram">Написать в Telegram</a>
+      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener noreferrer nofollow" class="btn hover-target" data-event="cta_click_primary" data-cta-id="mobile_whatsapp">Написать в WhatsApp</a>
+      <a href="https://t.me/krepostdom" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_telegram">Написать в Telegram</a>
       <a href="#contact" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_estimate">Получить смету</a>
     </div>
   </aside>

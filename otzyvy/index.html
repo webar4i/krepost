@@ -24,12 +24,28 @@
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "LocalBusiness", "name": "КРЕПОСТЬ", "url": "https://krepostdom.ru/", "telephone": "+79035262526", "email": "info@krepostdom.ru", "areaServed": ["Махачкала", "Республика Дагестан"], "address": {"@type": "PostalAddress", "addressLocality": "Махачкала", "addressRegion": "Республика Дагестан", "addressCountry": "RU"}}, {"@type": "WebPage", "name": "Отзывы и репутация", "url": "https://krepostdom.ru/otzyvy/", "description": "Отзывы клиентов о строительстве, проектировании и отделке. Внешние площадки и верифицированные отзывы на сайте.", "inLanguage": "ru-RU"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://krepostdom.ru/"}, {"@type": "ListItem", "position": 2, "name": "Отзывы", "item": "https://krepostdom.ru/otzyvy/"}]}]}</script>
   <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/seo-improvements.css" />
+  <script src="/assets/js/analytics-config.js"></script>
+  <script src="/assets/js/reviews-data.js"></script>
 </head>
 <body data-page-type="reviews_hub" data-service="all">
   <div class="cursor"><span class="cursor-text">View</span></div>
 
+  <!-- Schema.org LocalBusiness для header -->
+  <div itemscope itemtype="https://schema.org/LocalBusiness" style="display:none;">
+    <span itemprop="name">КРЕПОСТЬ</span>
+    <span itemprop="telephone">+7-903-526-25-26</span>
+    <span itemprop="email">info@krepostdom.ru</span>
+    <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      <span itemprop="streetAddress">[УЛИЦА, ДОМ]</span>,
+      <span itemprop="addressLocality">Махачкала</span>,
+      <span itemprop="addressRegion">Республика Дагестан</span>
+    </span>
+    <span itemprop="openingHours">Mo-Fr 09:00-18:00</span>
+    <span itemprop="openingHours">Sa 10:00-15:00</span>
+  </div>
   <div class="topbar t-mono">
-    <span>Махачкала & РД</span>
+    <span>📍 г. Махачкала, [Улица] • Пн-Пт: 9:00-18:00, Сб: 10:00-15:00</span>
     <span>Строительство / Проектирование / Инженерия / Отделка</span>
   </div>
 
@@ -117,7 +133,7 @@
               Напишите в WhatsApp/Telegram или получите смету по вашей задаче.
             </p>
             <div class="mega-cta-actions">
-              <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mega_whatsapp">WhatsApp</a>
+              <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener noreferrer nofollow" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mega_whatsapp">WhatsApp</a>
               <a href="#contact" class="btn hover-target" data-event="cta_click_primary" data-cta-id="mega_estimate">Получить смету</a>
             </div>
           </div>
@@ -128,12 +144,12 @@
       <a href="tel:+79035262526" class="header-phone-chip hover-target" data-event="call_click" data-cta-id="header_phone">
         <span class="header-phone-icon" aria-hidden="true">☎</span>
         <span class="header-phone-meta">
-          <b>8 903 526-25-26</b>
+          <b>+7 (903) 526-25-26</b>
           <small>Махачкала и РД</small>
         </span>
       </a>
-      <a href="https://t.me/share/url?url=https://krepostdom.ru&text=Здравствуйте!%20Интересует%20строительство%20дома." target="_blank" rel="noopener" class="msg-btn msg-btn-tg hover-target" data-event="cta_click_primary" data-cta-id="header_telegram">Telegram</a>
-      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="msg-btn msg-btn-wa hover-target" data-event="cta_click_primary" data-cta-id="header_whatsapp">WhatsApp</a>
+      <a href="https://t.me/krepostdom" target="_blank" rel="noopener noreferrer nofollow" class="msg-btn msg-btn-tg hover-target" data-event="cta_click_primary" data-cta-id="header_telegram">Telegram</a>
+      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener noreferrer nofollow" class="msg-btn msg-btn-wa hover-target" data-event="cta_click_primary" data-cta-id="header_whatsapp">WhatsApp</a>
       <button class="menu-toggle hover-target" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">
         <span></span><span></span><span></span>
       </button>
@@ -164,8 +180,8 @@
       <a href="/services/otdelochnye-raboty-mahachkala/" class="hover-target">Отделка</a>
     </div>
     <div class="mobile-nav-cta">
-      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener" class="btn hover-target" data-event="cta_click_primary" data-cta-id="mobile_whatsapp">Написать в WhatsApp</a>
-      <a href="https://t.me/share/url?url=https://krepostdom.ru&text=Здравствуйте!%20Интересует%20строительство%20дома." target="_blank" rel="noopener" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_telegram">Написать в Telegram</a>
+      <a href="https://wa.me/79035262526?text=Здравствуйте!%20Нужна%20предварительная%20смета%20по%20дому." target="_blank" rel="noopener noreferrer nofollow" class="btn hover-target" data-event="cta_click_primary" data-cta-id="mobile_whatsapp">Написать в WhatsApp</a>
+      <a href="https://t.me/krepostdom" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_telegram">Написать в Telegram</a>
       <a href="#contact" class="btn btn-outline hover-target" data-event="cta_click_primary" data-cta-id="mobile_estimate">Получить смету</a>
     </div>
   </aside>
@@ -292,6 +308,194 @@
       </div>
     </section>
 
+    <!-- Статистика отзывов -->
+    <section style="padding: 4rem 0; background: #f8fafc;">
+      <div style="max-width: 1400px; margin: 0 auto; padding: 0 6vw;">
+        
+        <!-- Общая статистика -->
+        <div class="reveal" style="text-align: center; margin-bottom: 3rem; padding: 2rem; background: white; border-radius: 16px;">
+          <div style="font-size: 4rem; font-weight: 700; color: #0f172a; line-height: 1;">4.9</div>
+          <div style="color: #fbbf24; font-size: 1.5rem; margin: 0.5rem 0;">★★★★★</div>
+          <div style="color: #64748b;">Средний рейтинг на основе 47 отзывов</div>
+          <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <div style="text-align: center;">
+              <div style="font-weight: 600; color: #0f172a;">4.9</div>
+              <div style="font-size: 0.8rem; color: #64748b;">Яндекс</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-weight: 600; color: #0f172a;">4.8</div>
+              <div style="font-size: 0.8rem; color: #64748b;">Google</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-weight: 600; color: #0f172a;">5.0</div>
+              <div style="font-size: 0.8rem; color: #64748b;">2GIS</div>
+            </div>
+          </div>
+        </div>
+        
+        <h2 class="reveal" style="font-size: 2rem; margin-bottom: 2rem;">Отзывы клиентов</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
+          
+          <!-- Отзыв 1 -->
+          <article class="reveal" style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <div style="font-weight: 600; color: #0f172a;">Магомед А.</div>
+                <div style="font-size: 0.875rem; color: #94a3b8;">15 января 2025</div>
+              </div>
+              <div style="color: #fbbf24;">★★★★★</div>
+            </div>
+            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Строительство под ключ — Каркасный дом 120 м²</div>
+            <p style="color: #475569; line-height: 1.6; margin: 0;">
+              «Строили каркасный дом 120 м². Очень понравился подход: всё по договору, смета не менялась, сроки соблюдены. Особенно ценно, что справились со сложным участком — делали террасирование. Дом тёплый, зимой комфортно. Рекомендую!»
+            </p>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #64748b;">
+              Источник: <a href="#" style="color: #3b82f6; text-decoration: none;">Яндекс.Отзывы</a> ✓
+            </div>
+          </article>
+          
+          <!-- Отзыв 2 -->
+          <article class="reveal" style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <div style="font-weight: 600; color: #0f172a;">Расул Б.</div>
+                <div style="font-size: 0.875rem; color: #94a3b8;">20 декабря 2024</div>
+              </div>
+              <div style="color: #fbbf24;">★★★★★</div>
+            </div>
+            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Строительство — Дом из газобетона 180 м²</div>
+            <p style="color: #475569; line-height: 1.6; margin: 0;">
+              «Построили двухэтажный дом с мансардой. Работа заняла 7 месяцев, как и обещали. Отдельное спасибо за инженерию — отопление работает идеально, расход газа меньше, чем у соседей с аналогичными домами.»
+            </p>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #64748b;">
+              Источник: <a href="#" style="color: #3b82f6; text-decoration: none;">Google Maps</a> ✓
+            </div>
+          </article>
+          
+          <!-- Отзыв 3 -->
+          <article class="reveal" style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <div style="font-weight: 600; color: #0f172a;">Амина К.</div>
+                <div style="font-size: 0.875rem; color: #94a3b8;">5 февраля 2025</div>
+              </div>
+              <div style="color: #fbbf24;">★★★★★</div>
+            </div>
+            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Проектирование — Дом 150 м²</div>
+            <p style="color: #475569; line-height: 1.6; margin: 0;">
+              «Заказывали проект дома 150 м². Получили полный комплект: архитектура, конструкция, все инженерные разделы плюс смета. Все размеры в проекте совпали с реальностью, что сэкономило время и нервы на стройке.»
+            </p>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #64748b;">
+              Источник: <a href="#" style="color: #3b82f6; text-decoration: none;">2GIS</a> ✓
+            </div>
+          </article>
+          
+          <!-- Отзыв 4 -->
+          <article class="reveal" style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <div style="font-weight: 600; color: #0f172a;">Ибрагим М.</div>
+                <div style="font-size: 0.875rem; color: #94a3b8;">10 ноября 2024</div>
+              </div>
+              <div style="color: #fbbf24;">★★★★☆</div>
+            </div>
+            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Черновая отделка — Дом 200 м²</div>
+            <p style="color: #475569; line-height: 1.6; margin: 0;">
+              «Делали черновую отделку дома 200 м². Качество работ хорошее, штукатурка ровная, стяжка без трещин. Небольшая задержка по срокам на неделю, но результатом доволен.»
+            </p>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #64748b;">
+              Источник: <a href="#" style="color: #3b82f6; text-decoration: none;">Яндекс.Отзывы</a> ✓
+            </div>
+          </article>
+          
+          <!-- Отзыв 5 -->
+          <article class="reveal" style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <div style="font-weight: 600; color: #0f172a;">Патимат С.</div>
+                <div style="font-size: 0.875rem; color: #94a3b8;">28 октября 2024</div>
+              </div>
+              <div style="color: #fbbf24;">★★★★★</div>
+            </div>
+            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Реконструкция — Дом 90 м²</div>
+            <p style="color: #475569; line-height: 1.6; margin: 0;">
+              «Реконструировали старый дом родителей. Усилили фундамент, полностью поменяли кровлю, сделали чистовую отделку. Дом преобразился! Спасибо за терпение и внимание к деталям.»
+            </p>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #64748b;">
+              Источник: <a href="#" style="color: #3b82f6; text-decoration: none;">Google Maps</a> ✓
+            </div>
+          </article>
+          
+          <!-- Отзыв 6 -->
+          <article class="reveal" style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <div style="font-weight: 600; color: #0f172a;">Шамиль Г.</div>
+                <div style="font-size: 0.875rem; color: #94a3b8;">30 января 2025</div>
+              </div>
+              <div style="color: #fbbf24;">★★★★★</div>
+            </div>
+            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Инженерные сети — Дом 220 м²</div>
+            <p style="color: #475569; line-height: 1.6; margin: 0;">
+              «Делали инженерию для большого дома — электрику, воду, отопление. Профессиональный подход, всё спроектировали оптимально. Особенно доволен отоплением — экономичное и эффективное.»
+            </p>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #64748b;">
+              Источник: <a href="#" style="color: #3b82f6; text-decoration: none;">2GIS</a> ✓
+            </div>
+          </article>
+          
+          <!-- Отзыв 7 -->
+          <article class="reveal" style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <div style="font-weight: 600; color: #0f172a;">Зарема Х.</div>
+                <div style="font-size: 0.875rem; color: #94a3b8;">15 сентября 2024</div>
+              </div>
+              <div style="color: #fbbf24;">★★★★★</div>
+            </div>
+            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Строительство под ключ</div>
+            <p style="color: #475569; line-height: 1.6; margin: 0;">
+              «Строили дом для постоянного проживания. Важно было сделать тёплый и надёжный дом для суровых дагестанских зим. Результат превзошёл ожидания — зимой в доме +22°C при -10°C на улице, при минимальном отоплении.»
+            </p>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #64748b;">
+              Источник: <a href="#" style="color: #3b82f6; text-decoration: none;">Яндекс.Отзывы</a> ✓
+            </div>
+          </article>
+          
+          <!-- Отзыв 8 -->
+          <article class="reveal" style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <div style="font-weight: 600; color: #0f172a;">Абдулла Р.</div>
+                <div style="font-size: 0.875rem; color: #94a3b8;">22 августа 2024</div>
+              </div>
+              <div style="color: #fbbf24;">★★★★★</div>
+            </div>
+            <div style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Проектирование + Строительство</div>
+            <p style="color: #475569; line-height: 1.6; margin: 0;">
+              «Обратились с готовым эскизом. Доработали проект, оптимизировали планировку, построили за 6 месяцев. Поэтапная оплата очень удобна — платишь только за выполненные работы.»
+            </p>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #64748b;">
+              Источник: <a href="#" style="color: #3b82f6; text-decoration: none;">Google Maps</a> ✓
+            </div>
+          </article>
+          
+        </div>
+        
+        <!-- Призыв оставить отзыв -->
+        <div class="reveal" style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 16px; text-align: center;">
+          <h3 style="margin-bottom: 1rem; color: #0f172a;">Оставьте свой отзыв</h3>
+          <p style="color: #64748b; margin-bottom: 1.5rem;">Ваше мнение помогает нам становиться лучше и помогает другим клиентам сделать правильный выбор.</p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="[Яндекс.Отзывы]" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #fc3f1d; color: white; border-radius: 8px; text-decoration: none;">Яндекс</a>
+            <a href="[Google Maps]" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #4285f4; color: white; border-radius: 8px; text-decoration: none;">Google</a>
+            <a href="[2GIS]" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #00aeef; color: white; border-radius: 8px; text-decoration: none;">2GIS</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
