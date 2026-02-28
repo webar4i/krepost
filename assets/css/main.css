@@ -472,6 +472,84 @@
       background: var(--bg-white);
     }
     .services-foot-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+    /* ==========================================================================
+       TECHNOLOGIES (Structural List)
+       ========================================================================== */
+    .tech-sec { position: relative; }
+    .tech-list { display: flex; flex-direction: column; }
+    .tech-row {
+      display: grid;
+      grid-template-columns: 100px 1fr 2fr;
+      padding: 52px var(--pad);
+      align-items: start;
+      gap: 32px;
+      border-top: 1px solid var(--border);
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .tech-row:hover { background: var(--bg-white); }
+    .tech-row .t-mono { padding-top: 5px; }
+    .tech-row .h-md {
+      margin: 0;
+      line-height: 1.2;
+      max-width: 18ch;
+    }
+    .tech-copy { display: flex; flex-direction: column; gap: 12px; }
+    .tech-copy .t-body {
+      font-size: 14px;
+      line-height: 1.55;
+      max-width: 62ch;
+    }
+    .tech-points { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tech-points span {
+      padding: 5px 10px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.7);
+    }
+    .tech-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--text);
+    }
+    .tech-cta::after {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-right: 1.5px solid var(--text);
+      border-bottom: 1.5px solid var(--text);
+      transform: rotate(-45deg);
+    }
+    .tech-foot {
+      border-top: 1px solid var(--border);
+      padding: 28px var(--pad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: var(--bg-white);
+    }
+    .tech-foot .t-body {
+      font-size: 15px;
+      line-height: 1.5;
+      max-width: 62ch;
+    }
+    .tech-foot-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     
     /* Hover Image Follower */
     .hover-img-follower {
@@ -874,6 +952,10 @@
       .kpi-item:nth-child(2) { border-right: none; }
       .kpi-item:nth-child(1), .kpi-item:nth-child(2) { border-bottom: 1px solid var(--border); }
       .sec-header { grid-template-columns: 1fr; gap: 20px; }
+      .tech-row { grid-template-columns: 1fr; gap: 18px; padding: 40px var(--pad); }
+      .tech-row .t-mono { display: none; }
+      .tech-row .h-md { max-width: none; }
+      .tech-foot { flex-direction: column; align-items: flex-start; }
       .svc-row { grid-template-columns: 1fr; gap: 20px; padding: 40px var(--pad); }
       .services-foot { flex-direction: column; align-items: flex-start; }
       .price-intro { grid-template-columns: 1fr; }
@@ -917,6 +999,8 @@
       .mobile-nav-links a { font-size: 13px; padding: 14px 0; }
       .kpi-grid { grid-template-columns: 1fr; }
       .kpi-item { border-right: none !important; border-bottom: 1px solid var(--border); }
+      .tech-row { padding: 34px var(--pad); }
+      .tech-foot { padding: 22px var(--pad); }
       .price-intro-main, .price-intro-side { padding: 24px var(--pad); }
       .price-table th { display: none; }
       .price-table td { display: block; border-bottom: none; padding: 10px var(--pad); }
