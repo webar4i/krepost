@@ -1,4 +1,6 @@
 (function () {
+  const BASE_PATH = '/krepost';
+
   function safeText(value) {
     return value == null ? '' : String(value);
   }
@@ -30,7 +32,7 @@
     relatedRoot.innerHTML = related.map((item) => {
       return `
         <article class="case-related-card">
-          <a class="hover-target" href="/raboty/${item.slug}/">
+          <a class="hover-target" href="${BASE_PATH}/raboty/${item.slug}/">
             <span class="meta">${safeText(item.categoryLabel || '')} • ${safeText(item.year || '')}</span>
             <b>${safeText(item.title)}</b>
             <span class="case-link">Открыть кейс</span>
@@ -100,8 +102,8 @@
       img.alt = item.alt || item.title || 'Кейс';
     }
 
-    setHref('[data-case-service-link]', item.serviceUrl || '/services/');
-    setHref('[data-case-price-link]', item.priceUrl || '/tseny/');
+    setHref('[data-case-service-link]', item.serviceUrl || `${BASE_PATH}/services/`);
+    setHref('[data-case-price-link]', item.priceUrl || `${BASE_PATH}/tseny/`);
 
     renderRelatedCases(item, data);
   });

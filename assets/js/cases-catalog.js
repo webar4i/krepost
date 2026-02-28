@@ -1,4 +1,5 @@
 (function () {
+  const BASE_PATH = '/krepost';
   const CATEGORY_META = {
     all: 'Все работы',
     stroitelstvo: 'Строительство',
@@ -54,7 +55,7 @@
   }
 
   function buildCard(item) {
-    const detailUrl = `/raboty/${item.slug}/`;
+    const detailUrl = `${BASE_PATH}/raboty/${item.slug}/`;
     const metaChips = [
       item.categoryLabel || CATEGORY_META[item.category] || 'Кейс',
       item.city || '',

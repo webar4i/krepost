@@ -34,8 +34,8 @@ const CASES_DATA = [
       author: 'Расул Б.',
       text: 'Профессиональный подход к инженерии. Отопление работает идеально даже в сильные морозы.'
     },
-    serviceUrl: '/services/stroitelstvo-domov-pod-klyuch-mahachkala/',
-    priceUrl: '/tseny/stroitelstvo-domov-v-dagestane/'
+    serviceUrl: '/krepost/services/stroitelstvo-domov-pod-klyuch-mahachkala/',
+    priceUrl: '/krepost/tseny/stroitelstvo-domov-v-dagestane/'
   },
   {
     id: 'case-003',
@@ -71,8 +71,8 @@ const CASES_DATA = [
       author: 'Амина К.',
       text: 'Подробный проект, все размеры совпали. Смета помогла точно спланировать бюджет.'
     },
-    serviceUrl: '/services/proektirovanie-domov-mahachkala/',
-    priceUrl: '/tseny/'
+    serviceUrl: '/krepost/services/proektirovanie-domov-mahachkala/',
+    priceUrl: '/krepost/tseny/'
   },
   {
     id: 'case-004',
@@ -108,8 +108,8 @@ const CASES_DATA = [
       author: 'Ибрагим М.',
       text: 'Качественно выполненные черновые работы. Все коммуникации спрятаны аккуратно.'
     },
-    serviceUrl: '/services/otdelochnye-raboty-mahachkala/',
-    priceUrl: '/tseny/otdelochnye-raboty-mahachkala/'
+    serviceUrl: '/krepost/services/otdelochnye-raboty-mahachkala/',
+    priceUrl: '/krepost/tseny/otdelochnye-raboty-mahachkala/'
   },
   {
     id: 'case-005',
@@ -145,8 +145,8 @@ const CASES_DATA = [
       author: 'Патимат С.',
       text: 'Дом стал как новый. Старый фундамент усилили, теперь нет трещин. Спасибо за терпение.'
     },
-    serviceUrl: '/services/otdelochnye-raboty-mahachkala/',
-    priceUrl: '/tseny/otdelochnye-raboty-mahachkala/'
+    serviceUrl: '/krepost/services/otdelochnye-raboty-mahachkala/',
+    priceUrl: '/krepost/tseny/otdelochnye-raboty-mahachkala/'
   },
   {
     id: 'case-006',
@@ -182,8 +182,8 @@ const CASES_DATA = [
       author: 'Шамиль Г.',
       text: 'Все системы работают без нареканий. Отопление очень экономичное.'
     },
-    serviceUrl: '/services/proekt-inzhenernyh-setey-mahachkala/',
-    priceUrl: '/tseny/'
+    serviceUrl: '/krepost/services/proekt-inzhenernyh-setey-mahachkala/',
+    priceUrl: '/krepost/tseny/'
   },
   {
     id: 'case-007',
@@ -219,8 +219,8 @@ const CASES_DATA = [
       author: 'Гаджи М.',
       text: 'Команда держала график и качество. Дом получился именно таким, как планировали.'
     },
-    serviceUrl: '/services/stroitelstvo-domov-pod-klyuch-mahachkala/',
-    priceUrl: '/tseny/stroitelstvo-domov-v-dagestane/'
+    serviceUrl: '/krepost/services/stroitelstvo-domov-pod-klyuch-mahachkala/',
+    priceUrl: '/krepost/tseny/stroitelstvo-domov-v-dagestane/'
   }
 ];
 
