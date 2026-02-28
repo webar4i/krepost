@@ -11,3 +11,4 @@ scroll_50;GA4;scroll depth >= 50%;page_type;no;Engagement
 scroll_90;GA4;scroll depth >= 90%;page_type;no;Engagement
 cta_click_primary;GA4+Metrika;click primary CTA;cta_id,page_type,service;no;CRO baseline
 faq_expand;GA4;expand FAQ item;faq_id,page_type;no;AEO/intent signal
+catalog_filter_change;GA4+Metrika;change of catalog filters;page_type,service,category,city,year,results_count;no;Trust-signal from work catalog exploration

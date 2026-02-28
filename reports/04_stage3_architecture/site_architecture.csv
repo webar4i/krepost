@@ -18,3 +18,9 @@ URL;Page Type;Purpose;Primary Cluster;Intent;Depth;Template
 /guides/otdelka/chernovaya-vs-chistovaya/;child_guide;Черновая vs чистовая отделка;Отделочные работы;Informational;3;guide_template
 /o-kompanii/;trust_page;О компании;Доверие;Navigational;1;trust_template
 /kontakty/;trust_page;Контакты и зоны обслуживания;Локальное SEO;Navigational;1;trust_template
+/raboty/dom-iz-gazobetona-180m-talgi/;case_detail;Кейс: дом из газобетона 180 м²;Доверие;Commercial;2;case_detail_template
+/raboty/proekt-doma-150m-kaspiysk-inzheneriya/;case_detail;Кейс: проект дома 150 м²;Доверие;Commercial;2;case_detail_template
+/raboty/chernovaya-otdelka-doma-200m-mahachkala/;case_detail;Кейс: черновая отделка 200 м²;Доверие;Commercial;2;case_detail_template
+/raboty/rekonstrukciya-doma-90m-aksay/;case_detail;Кейс: реконструкция дома 90 м²;Доверие;Commercial;2;case_detail_template
+/raboty/inzhenernye-seti-kottedzh-220m-izberbash/;case_detail;Кейс: инженерные сети коттеджа 220 м²;Доверие;Commercial;2;case_detail_template
+/raboty/kirpichnyy-dom-160m-mahachkala/;case_detail;Кейс: кирпичный дом 160 м²;Доверие;Commercial;2;case_detail_template
