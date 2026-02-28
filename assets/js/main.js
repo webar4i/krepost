@@ -38,10 +38,46 @@
         megaTrigger.setAttribute('aria-expanded', 'false');
       };
 
+      const positionMegaMenu = () => {
+        if (!megaMenu || !megaWrap) return;
+
+        const isOpen = megaWrap.classList.contains('is-open');
+        const baselineTransform = isOpen ? 'translate3d(0px, 0, 0)' : 'translate3d(0px, 8px, 0)';
+        const previousInlineTransition = megaMenu.style.transition;
+        megaMenu.style.transition = 'none';
+        megaMenu.style.transform = baselineTransform;
+
+        const rootPad = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pad'));
+        const viewportPadding = Number.isFinite(rootPad) ? Math.max(8, rootPad) : 12;
+        const rect = megaMenu.getBoundingClientRect();
+        let shiftX = 0;
+
+        if (rect.left < viewportPadding) {
+          shiftX += viewportPadding - rect.left;
+        }
+        if (rect.right > window.innerWidth - viewportPadding) {
+          shiftX -= rect.right - (window.innerWidth - viewportPadding);
+        }
+
+        megaMenu.style.setProperty('--mega-shift-x', `${Math.round(shiftX)}px`);
+        megaMenu.style.transform = `translate3d(${Math.round(shiftX)}px, ${isOpen ? 0 : 8}px, 0)`;
+        void megaMenu.offsetWidth;
+        megaMenu.style.transition = previousInlineTransition;
+      };
+
+      const scheduleMegaMenuPosition = () => {
+        requestAnimationFrame(() => {
+          positionMegaMenu();
+          requestAnimationFrame(positionMegaMenu);
+        });
+        setTimeout(positionMegaMenu, 120);
+      };
+
       const openMegaMenu = () => {
         if (!megaWrap || !megaTrigger) return;
         megaWrap.classList.add('is-open');
         megaTrigger.setAttribute('aria-expanded', 'true');
+        scheduleMegaMenuPosition();
       };
 
       if (megaWrap && megaTrigger && megaMenu) {
@@ -64,7 +100,14 @@
 
         window.addEventListener('resize', () => {
           if (window.innerWidth <= 1024) closeMegaMenu();
+          if (window.innerWidth > 1024) positionMegaMenu();
         });
+
+        positionMegaMenu();
+        window.addEventListener('load', positionMegaMenu);
+        if (document.fonts && typeof document.fonts.ready?.then === 'function') {
+          document.fonts.ready.then(positionMegaMenu);
+        }
       }
 
       // 4. Mobile Navigation (conversion-first on small screens)
