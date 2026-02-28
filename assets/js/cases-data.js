@@ -6,7 +6,7 @@ const CASES_DATA = [
     location: 'с. Ленинкент',
     year: '2025',
     category: 'stroitelstvo',
-    image: '/assets/img/cases/case-001.jpg',
+    image: '/krepost/assets/img/cases/case-001.jpg',
     description: 'Полный цикл строительства: от фундамента до чистовой отделки. Особенности проекта — сложный рельеф участка и необходимость террасирования.',
     stats: {
       area: '120 м²',
@@ -25,7 +25,7 @@ const CASES_DATA = [
     location: 'г. Махачкала, район Талги',
     year: '2024',
     category: 'stroitelstvo',
-    image: '/assets/img/cases/case-002.jpg',
+    image: '/krepost/assets/img/cases/case-002.jpg',
     description: 'Двухэтажный дом с гаражом на первом этаже. Сложная кровельная система с мансардными окнами.',
     stats: {
       area: '180 м²',
@@ -44,7 +44,7 @@ const CASES_DATA = [
     location: 'г. Каспийск',
     year: '2025',
     category: 'proektirovanie',
-    image: '/assets/img/cases/case-003.jpg',
+    image: '/krepost/assets/img/cases/case-003.jpg',
     description: 'Полный комплект проектной документации: АР, КР, инженерные разделы. Смета с расчетом материалов.',
     stats: {
       area: '150 м²',
@@ -63,7 +63,7 @@ const CASES_DATA = [
     location: 'г. Махачкала',
     year: '2024',
     category: 'otdelka',
-    image: '/assets/img/cases/case-004.jpg',
+    image: '/krepost/assets/img/cases/case-004.jpg',
     description: 'Полный комплекс черновых работ: штукатурка стен, стяжка полов, электромонтаж, разводка труб.',
     stats: {
       area: '200 м²',
@@ -82,7 +82,7 @@ const CASES_DATA = [
     location: 'с. Аксай',
     year: '2024',
     category: 'otdelka',
-    image: '/assets/img/cases/case-005.jpg',
+    image: '/krepost/assets/img/cases/case-005.jpg',
     description: 'Комплексная реконструкция: усиление фундамента, замена кровли, полная чистовая отделка.',
     stats: {
       area: '90 м²',
@@ -101,7 +101,7 @@ const CASES_DATA = [
     location: 'г. Избербаш',
     year: '2025',
     category: 'inzheneriya',
-    image: '/assets/img/cases/case-006.jpg',
+    image: '/krepost/assets/img/cases/case-006.jpg',
     description: 'Проектирование и монтаж всех инженерных систем: электрика, водоснабжение, канализация, отопление.',
     stats: {
       area: '220 м²',
