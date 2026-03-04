@@ -68,7 +68,7 @@
       <article class="case-card catalog-case-card" data-case-id="${escapeHtml(item.id)}" data-case-category="${escapeHtml(item.category)}">
         <a class="catalog-card-link hover-target" href="${escapeHtml(detailUrl)}" aria-label="${escapeHtml(item.title)}">
           <div class="catalog-cover ${escapeHtml(item.cover || 'cover-default')}">
-            <img src="${escapeHtml(item.image || '')}" alt="${escapeHtml(item.alt || item.title || 'Кейс')}" loading="lazy" decoding="async" onerror="this.classList.add('is-broken');this.closest('.catalog-cover').classList.add('is-fallback');">
+            <img src="${escapeHtml(item.image || '')}" alt="${escapeHtml(item.alt || item.title || 'Кейс')}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.classList.add('is-broken');this.closest('.catalog-cover').classList.add('is-fallback');">
             <span class="catalog-cover-badge">${escapeHtml(item.categoryLabel || CATEGORY_META[item.category] || 'Кейс')}</span>
           </div>
           <div class="catalog-card-body">
@@ -204,6 +204,29 @@
         setState({ category: 'all', city: 'all', year: 'all' }, true);
       });
     });
+
+    /* --- Mirror count sync --- */
+    const mirrorCountNode = root.querySelector('[data-catalog-count-mirror]');
+
+    const originalRender = render;
+    render = function () {
+      originalRender();
+      if (mirrorCountNode) {
+        mirrorCountNode.textContent = countNode.textContent;
+      }
+    };
+
+    /* --- Mobile filter toggle --- */
+    const mobileToggle = root.querySelector('[data-mobile-filter-toggle]');
+    const sidebar = root.querySelector('.catalog-sidebar');
+
+    if (mobileToggle && sidebar) {
+      mobileToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('is-open');
+        const isOpen = sidebar.classList.contains('is-open');
+        mobileToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
 
     setState(state, false);
   });

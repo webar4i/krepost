@@ -10,7 +10,7 @@ const CASES_DATA = [
     category: 'stroitelstvo',
     categoryLabel: 'Строительство',
     status: 'realized',
-    image: '/krepost/assets/img/cases/case-002.jpg',
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
     cover: 'cover-stone',
     alt: 'Дом из газобетона 180 м² с мансардой в районе Талги',
     description: 'Двухэтажный дом с гаражом на первом этаже. Реализовали сложную кровельную систему с мансардными окнами и монолитным перекрытием.',
@@ -47,7 +47,7 @@ const CASES_DATA = [
     category: 'proektirovanie',
     categoryLabel: 'Проектирование',
     status: 'realized',
-    image: '/krepost/assets/img/cases/case-003.jpg',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
     cover: 'cover-blueprint',
     alt: 'Проект дома 150 м² с инженерными решениями в Каспийске',
     description: 'Подготовили полный комплект проектной документации: АР, КР, инженерные разделы и смету материалов.',
@@ -84,7 +84,7 @@ const CASES_DATA = [
     category: 'otdelka',
     categoryLabel: 'Отделка',
     status: 'realized',
-    image: '/krepost/assets/img/cases/case-004.jpg',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
     cover: 'cover-concrete',
     alt: 'Черновая отделка дома 200 м² в Махачкале',
     description: 'Выполнили полный комплекс черновых работ: штукатурка, стяжка, электромонтаж и разводка сантехники.',
@@ -121,7 +121,7 @@ const CASES_DATA = [
     category: 'otdelka',
     categoryLabel: 'Отделка',
     status: 'realized',
-    image: '/krepost/assets/img/cases/case-005.jpg',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
     cover: 'cover-amber',
     alt: 'Реконструкция частного дома 90 м² в селе Аксай',
     description: 'Комплексная реконструкция: усиление фундамента, замена кровли, утепление и чистовая отделка.',
@@ -158,7 +158,7 @@ const CASES_DATA = [
     category: 'inzheneriya',
     categoryLabel: 'Инженерия',
     status: 'realized',
-    image: '/krepost/assets/img/cases/case-006.jpg',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=1200&q=80',
     cover: 'cover-graphite',
     alt: 'Инженерные сети для коттеджа 220 м² в Избербаше',
     description: 'Спроектировали и смонтировали ключевые инженерные системы: электрика, вода, канализация и отопление.',
@@ -195,7 +195,7 @@ const CASES_DATA = [
     category: 'stroitelstvo',
     categoryLabel: 'Строительство',
     status: 'realized',
-    image: '/krepost/assets/img/cases/case-007.jpg',
+    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80',
     cover: 'cover-clay',
     alt: 'Кирпичный дом 160 м² в поселке Семендер, Махачкала',
     description: 'Строительство кирпичного дома под ключ: фундамент, коробка, кровля, базовая инженерия и подготовка к чистовой отделке.',
@@ -221,8 +221,423 @@ const CASES_DATA = [
     },
     serviceUrl: '/krepost/services/stroitelstvo-domov-pod-klyuch-mahachkala/',
     priceUrl: '/krepost/tseny/stroitelstvo-domov-v-dagestane/'
+  },
+
+  // ============================================================================
+  //  ДОПОЛНИТЕЛЬНЫЕ ДЕМО-КЕЙСЫ
+  // ============================================================================
+  {
+    id: 'case-008',
+    slug: 'dom-iz-keramobloka-240m-kaspiysk',
+    title: 'Дом из керамоблока 240 м² в Каспийске',
+    location: 'г. Каспийск, участок «Южный»',
+    city: 'Каспийск',
+    year: '2024',
+    category: 'stroitelstvo',
+    categoryLabel: 'Строительство',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-stone',
+    alt: 'Дом из керамоблока 240 м² в Каспийске',
+    description: 'Двухэтажный дом из крупноформатного керамического блока с эксплуатируемой плоской кровлей и панорамным остеклением.',
+    task: 'Построить энергоэффективный дом с панорамными окнами и плоской кровлей на сложном рельефе участка.',
+    solution: 'Выполнили террасирование участка, заложили усиленный ленточный фундамент, возвели стены из Porotherm 44 и смонтировали плоскую кровлю с гидроизоляцией.',
+    stages: [
+      'Геодезия и террасирование участка',
+      'Ленточный фундамент с гидроизоляцией',
+      'Кладка стен Porotherm 44',
+      'Монтаж плоской кровли',
+      'Панорамное остекление и наружная отделка'
+    ],
+    result: 'Современный дом 240 м² с плоской кровлей и высокой энергоэффективностью.',
+    stats: {
+      area: '240 м²',
+      duration: '10 месяцев',
+      budget: 'от 9.6 млн ₽'
+    },
+    features: ['Porotherm 44', 'Плоская кровля', 'Панорамные окна', 'Террасирование', 'Утепление'],
+    testimonial: {
+      author: 'Магомед А.',
+      text: 'Дом выглядит как из журнала. Плоская кровля оказалась очень практичной.'
+    },
+    serviceUrl: '/krepost/services/stroitelstvo-domov-pod-klyuch-mahachkala/',
+    priceUrl: '/krepost/tseny/stroitelstvo-domov-v-dagestane/'
+  },
+  {
+    id: 'case-009',
+    slug: 'proekt-kottedzha-280m-mahachkala',
+    title: 'Проект коттеджа 280 м² с бассейном',
+    location: 'г. Махачкала, п. Ленинкент',
+    city: 'Махачкала',
+    year: '2024',
+    category: 'proektirovanie',
+    categoryLabel: 'Проектирование',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-blueprint',
+    alt: 'Проект коттеджа 280 м² с бассейном в Махачкале',
+    description: 'Разработали архитектурный проект с интегрированным бассейном, гаражом на два авто и террасой с видом на горы.',
+    task: 'Спроектировать коттедж премиум-класса с бассейном, учесть сейсмику 8 баллов и ветровые нагрузки.',
+    solution: 'Привлекли конструктора для сейсмоусиления, интегрировали бассейн в цокольный этаж и предусмотрели панорамное остекление.',
+    stages: [
+      'Бриф и обмер участка',
+      'Эскизный проект с 3D-визуализацией',
+      'Архитектурный и конструктивный разделы',
+      'Проект бассейна и инженерных систем',
+      'Согласование и передача комплекта'
+    ],
+    result: 'Проект прошёл экспертизу и готов к строительству.',
+    stats: {
+      area: '280 м²',
+      duration: '2 месяца',
+      budget: 'от 150 000 ₽'
+    },
+    features: ['3D-визуализация', 'Сейсмоусиление', 'Бассейн', 'Гараж', 'Терраса'],
+    testimonial: {
+      author: 'Анзор К.',
+      text: 'Визуализация помогла понять проект ещё до начала стройки. Все учли — от бассейна до гаража.'
+    },
+    serviceUrl: '/krepost/services/proektirovanie-domov-mahachkala/',
+    priceUrl: '/krepost/tseny/'
+  },
+  {
+    id: 'case-010',
+    slug: 'otoplenie-kottedzh-320m-derbent',
+    title: 'Отопление и водоснабжение коттеджа 320 м²',
+    location: 'г. Дербент',
+    city: 'Дербент',
+    year: '2025',
+    category: 'inzheneriya',
+    categoryLabel: 'Инженерия',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1585128903994-9788298932a4?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-graphite',
+    alt: 'Монтаж отопления и водоснабжения в коттедже 320 м² в Дербенте',
+    description: 'Смонтировали систему газового отопления с тёплыми полами, скважину и водоподготовку для крупного коттеджа.',
+    task: 'Обеспечить автономное водоснабжение и отопление для коттеджа 320 м² с тёплыми полами на двух этажах.',
+    solution: 'Пробурили скважину 55 м, установили станцию водоподготовки, смонтировали двухконтурный котёл и 6 коллекторов тёплого пола.',
+    stages: [
+      'Расчёт теплопотерь и подбор оборудования',
+      'Бурение скважины и обвязка',
+      'Монтаж котельного оборудования',
+      'Укладка тёплых полов',
+      'Пусконаладка и балансировка'
+    ],
+    result: 'Автономная система работает стабильно, тёплый пол выходит на режим за 40 минут.',
+    stats: {
+      area: '320 м²',
+      duration: '2 месяца',
+      budget: 'от 1.4 млн ₽'
+    },
+    features: ['Тёплый пол', 'Газовый котёл', 'Скважина 55 м', 'Водоподготовка', 'Коллекторная разводка'],
+    testimonial: {
+      author: 'Камиль Д.',
+      text: 'Тёплый пол — лучшее решение. Зимой по всему дому комфортно, а расход газа минимален.'
+    },
+    serviceUrl: '/krepost/services/proekt-inzhenernyh-setey-mahachkala/',
+    priceUrl: '/krepost/tseny/'
+  },
+  {
+    id: 'case-011',
+    slug: 'chistovaya-otdelka-kvartiry-110m-mahachkala',
+    title: 'Чистовая отделка квартиры 110 м²',
+    location: 'г. Махачкала, жк «Каспий»',
+    city: 'Махачкала',
+    year: '2025',
+    category: 'otdelka',
+    categoryLabel: 'Отделка',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-amber',
+    alt: 'Чистовая отделка квартиры 110 м² в ЖК Каспий, Махачкала',
+    description: 'Полная чистовая отделка: керамогранит, декоративная штукатурка, встроенные шкафы и кухня под ключ.',
+    task: 'Сделать чистовую отделку квартиры 110 м² в современном стиле за 3 месяца.',
+    solution: 'Разработали дизайн-концепт, согласовали материалы и выполнили отделку с параллельным монтажом мебели.',
+    stages: [
+      'Согласование дизайн-концепта',
+      'Укладка керамогранита и ламината',
+      'Декоративная штукатурка и покраска',
+      'Монтаж встроенной мебели',
+      'Установка освещения и финальная уборка'
+    ],
+    result: 'Квартира полностью готова к заселению, клиент доволен качеством отделки.',
+    stats: {
+      area: '110 м²',
+      duration: '3 месяца',
+      budget: 'от 2.6 млн ₽'
+    },
+    features: ['Керамогранит', 'Декоративная штукатурка', 'Встроенные шкафы', 'Кухня под ключ', 'Освещение'],
+    testimonial: {
+      author: 'Зарема Х.',
+      text: 'Квартира выглядит шикарно. Качество отделки на высшем уровне.'
+    },
+    serviceUrl: '/krepost/services/otdelochnye-raboty-mahachkala/',
+    priceUrl: '/krepost/tseny/otdelochnye-raboty-mahachkala/'
+  },
+  {
+    id: 'case-012',
+    slug: 'dom-pod-klyuch-130m-buynaksk',
+    title: 'Дом под ключ 130 м² в Буйнакске',
+    location: 'г. Буйнакск',
+    city: 'Буйнакск',
+    year: '2023',
+    category: 'stroitelstvo',
+    categoryLabel: 'Строительство',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-stone',
+    alt: 'Строительство дома под ключ 130 м² в Буйнакске',
+    description: 'Одноэтажный дом из газобетона с мягкой кровлей, верандой и полным комплексом инженерных сетей.',
+    task: 'Построить одноэтажный дом 130 м² с верандой для сезонного и постоянного проживания.',
+    solution: 'Заложили плитный фундамент, выполнили кладку из газобетона D500, смонтировали мягкую кровлю и все инженерные сети.',
+    stages: [
+      'Плитный фундамент',
+      'Кладка стен из газобетона D500',
+      'Монтаж мягкой кровли',
+      'Инженерные сети: электрика, вода, отопление',
+      'Наружная отделка и веранда'
+    ],
+    result: 'Дом полностью сдан, семья заехала через 6 месяцев после начала строительства.',
+    stats: {
+      area: '130 м²',
+      duration: '6 месяцев',
+      budget: 'от 5.2 млн ₽'
+    },
+    features: ['Газобетон D500', 'Мягкая кровля', 'Веранда', 'Тёплый пол', 'Септик'],
+    testimonial: {
+      author: 'Мурад И.',
+      text: 'Сдали точно в срок. Дом тёплый, уютный — именно то, что хотели.'
+    },
+    serviceUrl: '/krepost/services/stroitelstvo-domov-pod-klyuch-mahachkala/',
+    priceUrl: '/krepost/tseny/stroitelstvo-domov-v-dagestane/'
+  },
+  {
+    id: 'case-013',
+    slug: 'proekt-dvuhetazhnogo-doma-200m-derbent',
+    title: 'Проект двухэтажного дома 200 м²',
+    location: 'г. Дербент',
+    city: 'Дербент',
+    year: '2023',
+    category: 'proektirovanie',
+    categoryLabel: 'Проектирование',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-blueprint',
+    alt: 'Проект двухэтажного дома 200 м² в Дербенте',
+    description: 'Полный проект с привязкой к участку: архитектура, конструктив, вентиляция и электроснабжение.',
+    task: 'Спроектировать двухэтажный дом с учётом южного климата и высокой сейсмичности.',
+    solution: 'Применили монолитный каркас, предусмотрели естественную вентиляцию через внутренний атриум и террасу на втором этаже.',
+    stages: [
+      'Анализ участка и инсоляции',
+      'Архитектурные решения с атриумом',
+      'Конструктивный раздел (монолитный каркас)',
+      'Инженерные разделы',
+      'Передача проекта и авторский надзор'
+    ],
+    result: 'Проект с авторским надзором — строительство идёт по графику.',
+    stats: {
+      area: '200 м²',
+      duration: '2.5 месяца',
+      budget: 'от 120 000 ₽'
+    },
+    features: ['Монолитный каркас', 'Атриум', 'Сейсмоустойчивость', 'Терраса', 'Авторский надзор'],
+    testimonial: {
+      author: 'Сулейман Р.',
+      text: 'Авторский надзор — огромный плюс. На стройке всё совпадает с проектом.'
+    },
+    serviceUrl: '/krepost/services/proektirovanie-domov-mahachkala/',
+    priceUrl: '/krepost/tseny/'
+  },
+  {
+    id: 'case-014',
+    slug: 'elektrika-dom-170m-kaspiysk',
+    title: 'Электромонтаж дома 170 м²',
+    location: 'г. Каспийск',
+    city: 'Каспийск',
+    year: '2024',
+    category: 'inzheneriya',
+    categoryLabel: 'Инженерия',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-graphite',
+    alt: 'Электромонтаж частного дома 170 м² в Каспийске',
+    description: 'Полный электромонтаж: щит 20 кВт, слаботочные системы, умный дом и наружное освещение.',
+    task: 'Выполнить электромонтаж дома 170 м² с запасом мощности и элементами умного дома.',
+    solution: 'Собрали щит на 20 кВт с UPS, проложили слаботочку для видеонаблюдения и интернета, установили датчики движения.',
+    stages: [
+      'Проект электроснабжения',
+      'Штробление и прокладка трасс',
+      'Сборка распределительного щита',
+      'Монтаж слаботочных систем',
+      'Наружное освещение и пусконаладка'
+    ],
+    result: 'Электрика работает стабильно, UPS обеспечивает бесперебойность при отключениях.',
+    stats: {
+      area: '170 м²',
+      duration: '1 месяц',
+      budget: 'от 420 000 ₽'
+    },
+    features: ['Щит 20 кВт', 'UPS', 'Умный дом', 'Видеонаблюдение', 'Наружное освещение'],
+    testimonial: {
+      author: 'Арсен Т.',
+      text: 'UPS — лучшее вложение. Свет не моргает даже при отключениях в районе.'
+    },
+    serviceUrl: '/krepost/services/proekt-inzhenernyh-setey-mahachkala/',
+    priceUrl: '/krepost/tseny/'
+  },
+  {
+    id: 'case-015',
+    slug: 'otdelka-fasada-dom-260m-mahachkala',
+    title: 'Отделка фасада дома 260 м²',
+    location: 'г. Махачкала, п. Тарки',
+    city: 'Махачкала',
+    year: '2023',
+    category: 'otdelka',
+    categoryLabel: 'Отделка',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-concrete',
+    alt: 'Отделка фасада дома 260 м² в Махачкале',
+    description: 'Утепление фасада мокрым методом (EIFS), декоративная штукатурка «короед» и облицовка цоколя камнем.',
+    task: 'Утеплить фасад дома 260 м² и выполнить декоративную отделку в единой цветовой гамме.',
+    solution: 'Утеплили базальтовой ватой 100 мм, нанесли армирующий слой и декоративную штукатурку, облицевали цоколь натуральным камнем.',
+    stages: [
+      'Подготовка основания и установка лесов',
+      'Монтаж утеплителя (базальтовая вата 100 мм)',
+      'Армирующий слой и грунтовка',
+      'Декоративная штукатурка «короед»',
+      'Облицовка цоколя камнем'
+    ],
+    result: 'Фасад выглядит эффектно, теплопотери сократились на 40%.',
+    stats: {
+      area: '260 м²',
+      duration: '1.5 месяца',
+      budget: 'от 1.1 млн ₽'
+    },
+    features: ['EIFS утепление', 'Базальтовая вата', 'Штукатурка «короед»', 'Каменный цоколь', 'Водоотвод'],
+    testimonial: {
+      author: 'Хадижа М.',
+      text: 'Фасад как на картинке. Зимой стало заметно теплее — экономим на отоплении.'
+    },
+    serviceUrl: '/krepost/services/otdelochnye-raboty-mahachkala/',
+    priceUrl: '/krepost/tseny/otdelochnye-raboty-mahachkala/'
+  },
+  {
+    id: 'case-016',
+    slug: 'dom-sip-panel-120m-izberbash',
+    title: 'Дом из СИП-панелей 120 м²',
+    location: 'г. Избербаш',
+    city: 'Избербаш',
+    year: '2023',
+    category: 'stroitelstvo',
+    categoryLabel: 'Строительство',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-clay',
+    alt: 'Дом из СИП-панелей 120 м² в Избербаше',
+    description: 'Быстровозводимый дом из SIP-панелей с двускатной кровлей. Сборка коробки за 14 дней.',
+    task: 'Построить бюджетный дом для молодой семьи за минимальные сроки.',
+    solution: 'Использовали заводские SIP-панели, фундамент на винтовых сваях, экспресс-монтаж коробки и базовая инженерия.',
+    stages: [
+      'Фундамент на винтовых сваях',
+      'Монтаж SIP-панелей (стены и перекрытия)',
+      'Кровля из металлочерепицы',
+      'Базовая инженерия',
+      'Наружная отделка сайдингом'
+    ],
+    result: 'Дом собран за 14 дней, заселение через 2 месяца.',
+    stats: {
+      area: '120 м²',
+      duration: '2 месяца',
+      budget: 'от 3.2 млн ₽'
+    },
+    features: ['SIP-панели', 'Винтовые сваи', 'Металлочерепица', 'Сайдинг', 'Экспресс-монтаж'],
+    testimonial: {
+      author: 'Али Н.',
+      text: 'Невероятная скорость. Через 2 месяца уже жили в новом доме.'
+    },
+    serviceUrl: '/krepost/services/stroitelstvo-domov-pod-klyuch-mahachkala/',
+    priceUrl: '/krepost/tseny/stroitelstvo-domov-v-dagestane/'
+  },
+  {
+    id: 'case-017',
+    slug: 'kanalizaciya-i-vodootvedenie-poselok-talgi',
+    title: 'Канализация и водоотведение — посёлок Талги',
+    location: 'г. Махачкала, район Талги',
+    city: 'Махачкала',
+    year: '2025',
+    category: 'inzheneriya',
+    categoryLabel: 'Инженерия',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-graphite',
+    alt: 'Монтаж канализации и водоотведения в посёлке Талги',
+    description: 'Автономная канализация для 3 домовладений: септик, дренажное поле и ливневая система.',
+    task: 'Организовать автономную канализацию для группы из трёх домов на общей территории.',
+    solution: 'Установили многокамерный септик «Топас 20», спроектировали дренажное поле и смонтировали ливнёвку.',
+    stages: [
+      'Геологическое исследование грунта',
+      'Проектирование системы',
+      'Монтаж септика «Топас 20»',
+      'Устройство дренажного поля',
+      'Монтаж ливневой канализации'
+    ],
+    result: 'Система обслуживает 3 дома, работает стабильно и не требует частой откачки.',
+    stats: {
+      area: '3 дома',
+      duration: '1 месяц',
+      budget: 'от 680 000 ₽'
+    },
+    features: ['Топас 20', 'Дренажное поле', 'Ливнёвка', 'Геология', 'Обслуживание 3 домов'],
+    testimonial: {
+      author: 'Муслим А.',
+      text: 'Решили проблему канализации для всех трёх домов разом. Работает отлично.'
+    },
+    serviceUrl: '/krepost/services/proekt-inzhenernyh-setey-mahachkala/',
+    priceUrl: '/krepost/tseny/'
+  },
+  {
+    id: 'case-018',
+    slug: 'proekt-taunhausa-4-sekcii-mahachkala',
+    title: 'Проект таунхауса 4 секции × 95 м²',
+    location: 'г. Махачкала',
+    city: 'Махачкала',
+    year: '2024',
+    category: 'proektirovanie',
+    categoryLabel: 'Проектирование',
+    status: 'realized',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+    cover: 'cover-blueprint',
+    alt: 'Проект таунхауса 4 секции в Махачкале',
+    description: 'Проект блокированного малоэтажного дома из 4 секций с индивидуальными входами и придомовыми участками.',
+    task: 'Спроектировать таунхаус для инвестиционного проекта с максимальной площадью продаж.',
+    solution: 'Оптимизировали планировки для максимальной полезной площади, разделили инженерные сети на 4 автономных контура.',
+    stages: [
+      'Анализ участка и градплан',
+      'Архитектурные решения и фасады',
+      'Конструктивный раздел',
+      'Инженерные разделы (4 автономных контура)',
+      'Передача проекта девелоперу'
+    ],
+    result: 'Проект прошёл экспертизу, строительство стартовало через 3 недели.',
+    stats: {
+      area: '380 м²',
+      duration: '3 месяца',
+      budget: 'от 280 000 ₽'
+    },
+    features: ['Таунхаус', '4 секции', 'Автономные сети', 'Инвест-проект', 'Экспертиза'],
+    testimonial: {
+      author: 'Тимур Б.',
+      text: 'Проект окупился ещё до завершения стройки. Все секции проданы.'
+    },
+    serviceUrl: '/krepost/services/proektirovanie-domov-mahachkala/',
+    priceUrl: '/krepost/tseny/'
   }
 ];
+
+if (typeof window !== 'undefined') {
+  window.CASES_DATA = CASES_DATA;
+}
 
 // Экспорт
 if (typeof module !== 'undefined' && module.exports) {
