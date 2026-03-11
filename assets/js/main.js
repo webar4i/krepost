@@ -31,6 +31,26 @@
       const megaMenu = document.querySelector('.mega-menu');
       const desktopNavLinks = document.querySelectorAll('.nav a');
       const megaLinks = document.querySelectorAll('.mega-menu a');
+      const megaViewportGutter = 12;
+
+      const positionMegaMenu = () => {
+        if (!megaMenu || window.innerWidth <= 1024) return;
+
+        megaMenu.style.setProperty('--mega-shift-x', '0px');
+
+        const rect = megaMenu.getBoundingClientRect();
+        let shiftX = 0;
+
+        if (rect.left < megaViewportGutter) {
+          shiftX += megaViewportGutter - rect.left;
+        }
+
+        if (rect.right > window.innerWidth - megaViewportGutter) {
+          shiftX -= rect.right - (window.innerWidth - megaViewportGutter);
+        }
+
+        megaMenu.style.setProperty('--mega-shift-x', `${Math.round(shiftX)}px`);
+      };
 
       const closeMegaMenu = () => {
         if (!megaWrap || !megaTrigger) return;
@@ -39,7 +59,8 @@
       };
 
       const openMegaMenu = () => {
-        if (!megaWrap || !megaTrigger) return;
+        if (!megaWrap || !megaTrigger || !megaMenu) return;
+        positionMegaMenu();
         megaWrap.classList.add('is-open');
         megaTrigger.setAttribute('aria-expanded', 'true');
       };
@@ -63,8 +84,14 @@
         desktopNavLinks.forEach((link) => link.addEventListener('click', closeMegaMenu));
 
         window.addEventListener('resize', () => {
-          if (window.innerWidth <= 1024) closeMegaMenu();
+          if (window.innerWidth <= 1024) {
+            closeMegaMenu();
+            return;
+          }
+          positionMegaMenu();
         });
+
+        positionMegaMenu();
       }
 
       // 4. Mobile Navigation (conversion-first on small screens)
