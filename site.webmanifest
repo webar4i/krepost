@@ -7,7 +7,7 @@
   "theme_color": "#111111",
   "icons": [
     {
-      "src": "/krepost/assets/img/favicon.svg",
+      "src": "/assets/img/favicon.svg",
       "sizes": "64x64",
       "type": "image/svg+xml"
     }

@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/krepost"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/krepost/*"
+  to = "/:splat"
+  status = 301
